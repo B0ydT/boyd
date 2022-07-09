@@ -1,5 +1,5 @@
 ---
-title: "mywebsite"
+title: "Boyd's Bio Blog"
 toc: true
 page-layout: full
 title-block-banner: true
