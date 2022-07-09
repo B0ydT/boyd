@@ -2,14 +2,17 @@ project:
   type: website
 
 website:
-  title: "mywebsite"
+  title: "Boyd's Bio Blog"
   navbar:
     right:
-      - about.qmd
-      - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+    - about.qmd
+    - listings.qmd
+    - icon: twitter
+      href: https://twitter.com/bioboyd
+    - icon: linkedin
+      href: https://www.linkedin.com/in/boyd-tarlinton/
+    - icon: github
+      href: https://github.com/B0ydT/
 format:
   html:
     theme: cosmo
