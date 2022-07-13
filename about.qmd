@@ -1,6 +1,6 @@
 ---
 title: "About"
-image: profile.jpg
+image: profile.png
 about:
   template: jolla
   links:
@@ -13,6 +13,9 @@ about:
     - icon: github
       text: Github
       href: https://github.com/B0ydT/
+    - icon: at
+      text: Email
+      href: mailto:b2.tarlinton@qut.edu.au
 
 ---
 

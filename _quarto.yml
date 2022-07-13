@@ -7,12 +7,15 @@ website:
     right:
     - about.qmd
     - listings.qmd
+    - cv.qmd
     - icon: twitter
       href: https://twitter.com/bioboyd
     - icon: linkedin
       href: https://www.linkedin.com/in/boyd-tarlinton/
     - icon: github
       href: https://github.com/B0ydT/
+    - icon: at
+      href: mailto:b2.tarlinton@qut.edu.au
 format:
   html:
     theme: sandstone
