@@ -2,21 +2,18 @@
 title: "About"
 image: profile.png
 about:
-  template: jolla
+  template: solana
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/bioboyd
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/boyd-tarlinton/
-    - icon: github
-      text: Github
-      href: https://github.com/B0ydT/
-    - icon: at
-      text: Email
-      href: mailto:b2.tarlinton@qut.edu.au
-
+      - text: "{{< fa brands twitter >}} Twitter"
+        href: https://twitter.com/bioboyd
+      - text: "{{< fa brands linkedin >}} LinkedIn"
+        href: https://www.linkedin.com/in/boyd-tarlinton/
+      - text: "{{< fa brands github >}} GitHub"
+        href: https://github.com/B0ydT/
+      - text: "{{< fa at >}} Email"
+        href: mailto:b2.tarlinton@qut.edu.au
+      - text: "{{< fa brands orcid >}} ORCID"
+        href: https://orcid.org/0000-0002-4146-7083
 ---
 
 I lead bioinformatics and computational biology analyses as a senior research

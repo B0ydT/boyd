@@ -51,19 +51,21 @@ infrastructure
 |         Cook, D., **Tarlinton, B.**, McGree, J., Blackler, A., Hauxwell, C. (2022). Temperature sensing and honey bee colony strength. Journal of Economic Entomology, Volume 115, Issue 3, June 2022, Pages 715–723, [https://doi.org/10.1093/jee/toac034](https://doi.org/10.1093/jee/toac034)
 
 ### POSTERS AND CONFERENCE PRESENTATIONS
-|         Gorecki, V.\*, Maggini, R., **Tarlinton, B.** and Hauxwell, C., Rhodes, M. and Parsons, S., Roost selection, roost availability and gene flow among culvert roosts of a trawling bat in a subtropical city. International Bat Research Conference, Austin, USA, 7-12 August, 2022.
-|         Gorecki, V.\*, **Tarlinton, B.**, Parsons, S., Rhodes, M. and Hauxwell, C. Population structure and gene flow among culvert roosts of the trawling bat, the large-footed Myotis Myotis macropus. Spoken presentation: 20th Australasian Bat Society Conference, Brisbane, Australia, 11-13 April, 2022.
-|         Gorecki, V.\*, Parsons, S., Maggini, R., Rhodes, M., **Tarlinton, B.** and Hauxwell, C. Roost selection, roost availability and gene flow among culvert roosts of a trawling bat, the large-footed Myotis (Myotis macropus). Virtual 11th International Conference on Ecology and Transportation, 22-29 September, 2021.
-|         Gorecki, V.\*, Maggini, R., **Tarlinton, B.**, Hauxwell, C. and Parsons, S. The use of culverts in road networks as roost sites to maintain landscape connectivity for a trawling bat: a case study of the large-footed myotis (Myotis macropus) in Australia. Virtual Infrastructure and Ecology Network Europe, 12-14 January, 2021.
-|         Gorecki, V.\*, **Tarlinton, B.**, Parsons, S. and Hauxwell, C. Population structure and gene flow among culvert roosts of a specialist trawling bat in a subtropical city. Spoken presentation: Virtual Australasian Mammal Society Conference, 17- 18 November, 2020.
-|         Gorecki, V.\*, Maggini, R., **Tarlinton, B.**, Hauxwell, C., Rhodes, M. and Parsons, S. Roosting in road culverts: roost selection, roost availability and gene flow in a culvert roosting population of a trawling bat, the large-footed Myotis (Myotis macropus). Virtual 6th International Berlin Bat Meeting 23-27 March, 2020.
-|         Gorecki, V.\*, Parsons, S., Maggini, R., Rhodes, M., **Tarlinton, B.**, Hauxwell, C. From caves to culverts- roost selection and roosting ecology of the large-footed Myotis (Myotis macropus). Presented at ABS 2020, Te Anau, New Zealand, March 2020.
-|         **Tarlinton, B.**\*, McGree, J., Gloag, R., Hauxwell, C. Bacterial diversity of the Tetragonula carbonaria microbiome within and between hives. Presented at SIP 2019, Valencia, July 2019.
-|     Hauxwell, C.\*, Noune, C., **Tarlinton, B.**, Mcgree, J. Baculoviruses as quasispecies: dynamics and selection in vivo. Presented at SIP 2018, Gold Coast, August 2018.
-|         **Tarlinton, B.**\*, McGree, J., Hauxwell, C. Impacts of change of environment on the composition of microbiota in Australian stingless bees, Tetragonula carbonaria. Poster presented at SIP 2018, Gold Coast, August 2018.
-| Massaro, F., Gille, L.\*, **Tarlinton, B.**, Hauxwell, C. Yeasts associated with nests of Australian stingless bees (Meliponini). Poster Presented at SIP 2018, Gold Coast, August 2018.
-|         **Tarlinton, B.**\*, Noune, C., Hauxwell, C. High-Resolution Termite Metagenomics. Poster presented at ABACBS 2016, Brisbane, November 2016.
-\* Presenting author
+Gorecki, V.*, Maggini, R., Tarlinton, B., Hauxwell, C., Rhodes, M. and Parsons, S., Roost selection, roost availability and gene flow among culvert roosts of a trawling bat in a subtropical city. International Bat Research Conference, Austin, USA, 7-12 August, 2022.
+Hauxwell, C.*, Dickson, G., Patrick, D., Bryans, E., Martin, S., Tarlinton, B., Hernandez-Europa, Y., & Munro, M. (2022) The Death of Grass: A New Hope. In MLA Pasture Dieback Science Forum, 2022-05-03 - 2022-05-04, Brisbane, Australia.
+Hauxwell, C.*, Tarlinton, B., Dickson, G., Patrick, D., Hernandez-Europa, Y., Munro, M., Bryans, E., & Martin, S. (2022) The Death of Grass: The biology and role of the mealybug. In MLA Pasture Dieback Science Forum, 2022-05-03 - 2022-05-04, Brisbane, Australia.
+Gorecki, V.*, Tarlinton, B., Parsons, S., Rhodes, M. and Hauxwell, C. Population structure and gene flow among culvert roosts of the trawling bat, the large-footed Myotis Myotis macropus. Spoken presentation: 20th Australasian Bat Society Conference, Brisbane, Australia, 11-13 April, 2022.
+Gorecki, V.*, Parsons, S., Maggini, R., Rhodes, M., Tarlinton, B. and Hauxwell, C. Roost selection, roost availability and gene flow among culvert roosts of a trawling bat, the large-footed Myotis (Myotis macropus). Virtual 11th International Conference on Ecology and Transportation, 22-29 September, 2021.
+Gorecki, V.*, Maggini, R., Tarlinton, B., Hauxwell, C. and Parsons, S. The use of culverts in road networks as roost sites to maintain landscape connectivity for a trawling bat: a case study of the large-footed myotis (Myotis macropus) in Australia. Virtual Infrastructure and Ecology Network Europe, 12-14 January, 2021.
+Gorecki, V.*, Maggini, R., Tarlinton, B., Hauxwell, C., Rhodes, M. and Parsons, S. Roosting in road culverts: roost selection, roost availability and gene flow in a culvert roosting population of a trawling bat, the large-footed Myotis (Myotis macropus). Virtual 6th International Berlin Bat Meeting 23-27 March, 2020.
+Gorecki, V.*, Tarlinton, B., Parsons, S. and Hauxwell, C. Population structure and gene flow among culvert roosts of a specialist trawling bat in a subtropical city. Spoken presentation: Virtual Australasian Mammal Society Conference, 17- 18 November, 2020.
+Gorecki, V.*, Parsons, S., Maggini, R., Rhodes, M., Tarlinton, B., Hauxwell, C. From caves to culverts- roost selection and roosting ecology of the large-footed Myotis (Myotis macropus). Presented at ABS 2020, Te Anau, New Zealand, March 2020.
+Tarlinton, B.*, McGree, J., Gloag, R., Hauxwell, C. Bacterial diversity of the Tetragonula carbonaria microbiome within and between hives. Presented at SIP 2019, Valencia, July 2019.
+Hauxwell, C.*, Noune, C., Tarlinton, B., Mcgree, J. Baculoviruses as quasispecies: dynamics and selection in vivo. Presented at SIP 2018, Gold Coast, August 2018.
+Tarlinton, B.*, McGree, J., Hauxwell, C. Impacts of change of environment on the composition of microbiota in Australian stingless bees, Tetragonula carbonaria. Poster presented at SIP 2018, Gold Coast, August 2018.
+Massaro, F., Gille, L.*, Tarlinton, B., Hauxwell, C. Yeasts associated with nests of Australian stingless bees (Meliponini). Poster Presented at SIP 2018, Gold Coast, August 2018.
+Tarlinton, B.*, Noune, C., Hauxwell, C. High-Resolution Termite Metagenomics. Poster presented at ABACBS 2016, Brisbane, November 2016.
+
 
 ### AWARDS AND SCHOLARSHIPS
 - **First Place, SIP Student Poster Award** |	2018

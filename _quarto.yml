@@ -1,25 +1,23 @@
 project:
   type: website
-
-website:
-  title: "Boyd's Bio Blog"
-  navbar:
-    right:
-    - about.qmd
-    - listings.qmd
-    - cv.qmd
-    - icon: twitter
-      href: https://twitter.com/bioboyd
-    - icon: linkedin
-      href: https://www.linkedin.com/in/boyd-tarlinton/
-    - icon: github
-      href: https://github.com/B0ydT/
-    - icon: at
-      href: mailto:b2.tarlinton@qut.edu.au
 format:
   html:
     theme: sandstone
     css: styles.css
-
-
-
+website:
+  title: "Boyd's Bio Blog"
+  navbar:
+    right:
+      - about.qmd
+      - listings.qmd
+      - cv.qmd
+      - text: "{{< fa brands twitter  size=large >}}"
+        href: https://twitter.com/bioboyd
+      - text: "{{< fa brands linkedin  size=large >}}"
+        href: https://www.linkedin.com/in/boyd-tarlinton/
+      - text: "{{< fa brands github  size=large >}}"
+        href: https://github.com/B0ydT/
+      - text: "{{< fa at  size=large >}}"
+        href: mailto:b2.tarlinton@qut.edu.au
+      - text: "{{< fa brands orcid  size=large >}}"
+        href: https://orcid.org/0000-0002-4146-7083
