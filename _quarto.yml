@@ -8,7 +8,6 @@ website:
   title: "Boyd's Bio Blog"
   navbar:
     right:
-      - about.qmd
       - listings.qmd
       - cv.qmd
       - text: "{{< fa brands twitter  size=large >}}"
