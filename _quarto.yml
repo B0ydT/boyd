@@ -3,7 +3,6 @@ project:
 format:
   html:
     theme: sandstone
-    css: styles.css
 website:
   title: "Boyd's Bio Blog"
   navbar:

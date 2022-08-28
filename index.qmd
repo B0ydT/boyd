@@ -1,8 +1,8 @@
 ---
-title: "About"
+title: "About Me"
 image: profile.png
 about:
-  template: solana
+  template: broadside
   links:
       - text: "{{< fa brands twitter >}} Twitter"
         href: https://twitter.com/bioboyd
