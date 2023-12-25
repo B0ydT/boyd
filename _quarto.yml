@@ -9,13 +9,15 @@ website:
     right:
       - listings.qmd
       - cv.qmd
-      - text: "{{< fa brands twitter  size=large >}}"
+      - text: "{{< iconify fa6-brands twitter size=large >}}"
         href: https://twitter.com/bioboyd
-      - text: "{{< fa brands linkedin  size=large >}}"
+      - text: "{{< iconify fa6-brands linkedin size=large >}}"
         href: https://www.linkedin.com/in/boyd-tarlinton/
-      - text: "{{< fa brands github  size=large >}}"
+      - text: "{{< iconify fa6-brands github size=large >}}"
         href: https://github.com/B0ydT/
-      - text: "{{< fa at  size=large >}}"
+      - text: "{{< iconify fa6-solid at size=large >}}"
         href: mailto:b2.tarlinton@qut.edu.au
-      - text: "{{< fa brands orcid  size=large >}}"
+      - text: "{{< iconify fa6-brands orcid size=large >}}"
         href: https://orcid.org/0000-0002-4146-7083
+      - text: "{{< iconify fa6-brands google-scholar size=large >}}"
+        href: https://scholar.google.com.au/citations?user=NxovQdsAAAAJ&hl=en

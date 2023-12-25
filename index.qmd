@@ -4,16 +4,18 @@ image: profile.png
 about:
   template: broadside
   links:
-      - text: "{{< fa brands twitter >}} Twitter"
+      - text: "{{< iconify fa6-brands twitter >}} Twitter"
         href: https://twitter.com/bioboyd
-      - text: "{{< fa brands linkedin >}} LinkedIn"
+      - text: "{{< iconify fa6-brands linkedin >}} LinkedIn"
         href: https://www.linkedin.com/in/boyd-tarlinton/
-      - text: "{{< fa brands github >}} GitHub"
+      - text: "{{< iconify fa6-brands github >}} GitHub"
         href: https://github.com/B0ydT/
-      - text: "{{< fa at >}} Email"
+      - text: "{{< iconify fa6-solid at >}} Email"
         href: mailto:b2.tarlinton@qut.edu.au
-      - text: "{{< fa brands orcid >}} ORCID"
+      - text: "{{< iconify fa6-brands orcid >}} ORCID"
         href: https://orcid.org/0000-0002-4146-7083
+      - text: "{{< iconify fa6-brands google-scholar >}} Google Scholar"
+        href: https://scholar.google.com.au/citations?user=NxovQdsAAAAJ&hl=en
 ---
 
 I lead bioinformatics and computational biology analyses as a senior research
