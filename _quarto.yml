@@ -4,7 +4,7 @@ format:
   html:
     theme: sandstone
 website:
-  title: "Boyd's Bio Blog"
+  title: "Boyd Tarlinton"
   navbar:
     right:
       - listings.qmd
