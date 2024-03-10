@@ -7,7 +7,7 @@ website:
   title: "Boyd Tarlinton"
   navbar:
     right:
-      - listings.qmd
+      # - listings.qmd
       - cv.qmd
       - text: "{{< iconify fa6-brands twitter size=large >}}"
         href: https://twitter.com/bioboyd
