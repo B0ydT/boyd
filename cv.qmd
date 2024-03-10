@@ -99,8 +99,8 @@ Automated video processing of behavioural assays and applied GC-MS technology to
 </div>
 </li>
 <li>
-<input type="radio" name="accordion" id="b">
-<label for="b">INDUSTRY REPORTS</label>
+<input type="radio" name="accordion" id="c">
+<label for="c">INDUSTRY REPORTS</label>
 <div class="content">
 ::: {#refs_reports}
 :::
