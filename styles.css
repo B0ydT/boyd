@@ -20,6 +20,20 @@
   cursor: pointer;
 }
 
+label > .right{
+  display: inline-block;
+  position: absolute;
+  left: 78%;
+}
+
+.right{
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
 label::before{
   content: "+";
   margin-right: 10px;

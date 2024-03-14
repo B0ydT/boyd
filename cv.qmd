@@ -33,7 +33,7 @@ nocite: |
 <ul class="accordion">
 <li>
 <input type="radio" name="accordion" id="first" checked>
-<label for="first">Senior Research Assistant QUT 2022 -- Present</label>
+<label for="first">Senior Research Assistant<span class = "right">QUT 2022 -- Present</span></label>
 <div class="content">
 Managed data curation, exploration, visualisation, and modelling across four separate projects Analysed 16S metabarcoding data to investigate microbial markers of pasture dieback 
 Modelled diurnal fluctuations in bee hive temperature to isolate the relationship between colony strength and temperature regulation rained students and junior research assistants in the use of HPC infrastructure
@@ -41,14 +41,14 @@ Modelled diurnal fluctuations in bee hive temperature to isolate the relationshi
 </li>
 <li>
 <input type="radio" name="accordion" id="second">
-<label for="second">Research Assistant QUT Mar 2020 -- Jan 2022</label>
+<label for="second">Research Assistant <span class = "right">QUT Mar 2020 -- Jan 2022</span></label>
 <div class="content">
 Modelled the influence of bee colony strength on hive temperature Used GC-MS and SIFT-MS methods to identify volatile compounds associated with mealybug-induced pasture dieback
 </div>
 </li>
 <li>
 <input type="radio" name="accordion" id="third">
-<label for="third">Graduate Student QUT Feb 2017 -- Oct 2020</label>
+<label for="third">Graduate Student <span class = "right">QUT Feb 2017 -- Oct 2020</span></label>
 <div class="content">
 Investigated patterns of phylosymbiosis in the microbiome of a native Australian stingless bee (Tetragonula carbonaria)
 Provided bioinformatics and statistics expertise on collaborative projects including examining the genetic diversity of a threatened native Australian bat (Myotis Macropus)
@@ -56,14 +56,14 @@ Provided bioinformatics and statistics expertise on collaborative projects inclu
 </li>
 <li>
 <input type="radio" name="accordion" id="fourth">
-<label for="fourth">Visiting Graduate Student BOKU Oct 2018 -- Nov 2019</label>
+<label for="fourth">Visiting Graduate Student <span class = "right">BOKU Oct 2018 -- Nov 2019</span></label>
 <div class="content">
 Developed tools for reproducible metabolomics research in R
 </div>
 </li>
 <li>
 <input type="radio" name="accordion" id="fifth">
-<label for="fifth">Technical Assistant QUT Feb 2016 -- Dec 2017</label>
+<label for="fifth">Technical Assistant <span class = "right">QUT Feb 2016 -- Dec 2017</span></label>
 <div class="content">
 Contributed to collaborative projects developing fungal and viral biocontrol agents to manage invasive insect species
 Maintained insect colonies, assisted with bioassays, cultured microorganisms, and used molecular techniques including PCR and gel electrophoresis
@@ -71,7 +71,7 @@ Maintained insect colonies, assisted with bioassays, cultured microorganisms, an
 </li>
 <li>
 <input type="radio" name="accordion" id="sixth">
-<label for="sixth">Vacation Research Student QUT Nov 2016 -- Feb 2017, Nov 2015 -- Feb 2016</label>
+<label for="sixth">Vacation Research Student <span class = "right">QUT Nov 2016 -- Feb 2017, Nov 2015 -- Feb 2016</span></label>
 <div class="content">
 Optimised and benchmarked open source and in-house amplicon metabarcoding pipelines
 Automated video processing of behavioural assays and applied GC-MS technology to investigate the effects of fungal volatiles on beetle behaviour
