@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Boyd's Bio Bytes"
 listing:
   contents: posts
   sort: "date desc"
