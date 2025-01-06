@@ -13,6 +13,7 @@ csl: bibs/apa-cv.csl
 bibliography_journals: bibs/journals.bib
 bibliography_conferences: bibs/conferences.bib
 bibliography_reports: bibs/reports.bib
+bibliography_other: bibs/other.bib
 nocite: |
   @*
 ---
@@ -33,7 +34,7 @@ nocite: |
 <ul class="accordion">
 <li>
 <input type="radio" name="accordion" id="zeroth" checked>
-<label for="zeroth"><span class = "mycontainer"><span class = "left">Senior Data Analyst (QDAF)</span><span class = "right">Sep 2023 -- Present</span></span></label>
+<label for="zeroth"><span class = "exptitle"><span class = "left">Senior Data Analyst | DPI</span><span class = "right">Sep 2023 -- Present</span></span></label>
 <div class="content">
 Managed data curation, exploration, visualisation, and modelling across four separate projects Analysed 16S metabarcoding data to investigate microbial markers of pasture dieback 
 Modelled diurnal fluctuations in bee hive temperature to isolate the relationship between colony strength and temperature regulation rained students and junior research assistants in the use of HPC infrastructure
@@ -41,7 +42,7 @@ Modelled diurnal fluctuations in bee hive temperature to isolate the relationshi
 </li>
 <li>
 <input type="radio" name="accordion" id="first">
-<label for="first"><span class = "mycontainer"><span class = "left">Senior Research Assistant (QUT)</span><span class = "right">Jan 2022 -- Jul 2023</span></span></label>
+<label for="first"><span class = "exptitle"><span class = "left">Senior Research Assistant | QUT</span><span class = "right">Jan 2022 -- Jul 2023</span></span></label>
 <div class="content">
 Managed data curation, exploration, visualisation, and modelling across four separate projects Analysed 16S metabarcoding data to investigate microbial markers of pasture dieback 
 Modelled diurnal fluctuations in bee hive temperature to isolate the relationship between colony strength and temperature regulation rained students and junior research assistants in the use of HPC infrastructure
@@ -49,14 +50,14 @@ Modelled diurnal fluctuations in bee hive temperature to isolate the relationshi
 </li>
 <li>
 <input type="radio" name="accordion" id="second">
-<label for="second"><span class = "mycontainer"><span class = "left">Research Assistant (QUT)</span><span class = "right">Mar 2020 -- Jan 2022</span></span></label>
+<label for="second"><span class = "exptitle"><span class = "left">Research Assistant | QUT</span><span class = "right">Mar 2020 -- Jan 2022</span></span></label>
 <div class="content">
 Modelled the influence of bee colony strength on hive temperature Used GC-MS and SIFT-MS methods to identify volatile compounds associated with mealybug-induced pasture dieback
 </div>
 </li>
 <li>
 <input type="radio" name="accordion" id="third">
-<label for="third"><span class = "mycontainer"><span class = "left">Graduate Student (QUT)</span><span class = "right">Feb 2017 -- Oct 2020</span></span></label>
+<label for="third"><span class = "exptitle"><span class = "left">Graduate Student | QUT</span><span class = "right">Feb 2017 -- Oct 2020</span></span></label>
 <div class="content">
 Investigated patterns of phylosymbiosis in the microbiome of a native Australian stingless bee (Tetragonula carbonaria)
 Provided bioinformatics and statistics expertise on collaborative projects including examining the genetic diversity of a threatened native Australian bat (Myotis Macropus)
@@ -64,14 +65,14 @@ Provided bioinformatics and statistics expertise on collaborative projects inclu
 </li>
 <li>
 <input type="radio" name="accordion" id="fourth">
-<label for="fourth"><span class = "mycontainer"><span class = "left">Visiting Graduate Student (BOKU)</span><span class = "right">Oct 2018 -- Nov 2019</span></span></label>
+<label for="fourth"><span class = "exptitle"><span class = "left">Visiting Graduate Student | BOKU</span><span class = "right">Oct 2018 -- Nov 2019</span></span></label>
 <div class="content">
 Developed tools for reproducible metabolomics research in R
 </div>
 </li>
 <li>
 <input type="radio" name="accordion" id="fifth">
-<label for="fifth"><span class = "mycontainer"><span class = "left">Technical Assistant (QUT)</span><span class = "right">Feb 2016 -- Dec 2017</span></span></label>
+<label for="fifth"><span class = "exptitle"><span class = "left">Technical Assistant | QUT</span><span class = "right">Feb 2016 -- Dec 2017</span></span></label>
 <div class="content">
 Contributed to collaborative projects developing fungal and viral biocontrol agents to manage invasive insect species
 Maintained insect colonies, assisted with bioassays, cultured microorganisms, and used molecular techniques including PCR and gel electrophoresis
@@ -79,7 +80,7 @@ Maintained insect colonies, assisted with bioassays, cultured microorganisms, an
 </li>
 <li>
 <input type="radio" name="accordion" id="sixth">
-<label for="sixth"><span class = "mycontainer"><span class = "left">Vacation Research Student (QUT)</span><span class = "right">Nov 2016 -- Feb 2017, Nov 2015 -- Feb 2016</span></span></label>
+<label for="sixth"><span class = "exptitle"><span class = "left">Vacation Research Student | QUT</span><span class = "right">Nov 2016 -- Feb 2017, Nov 2015 -- Feb 2016</span></span></label>
 <div class="content">
 Optimised and benchmarked open source and in-house amplicon metabarcoding pipelines
 Automated video processing of behavioural assays and applied GC-MS technology to investigate the effects of fungal volatiles on beetle behaviour
@@ -92,7 +93,7 @@ Automated video processing of behavioural assays and applied GC-MS technology to
 <ul class="accordion">
 <li>
 <input type="radio" name="accordion" id="a">
-<label for="a">JOURNAL ARTICLES</label>
+<label for="a"><span class = "exptitle"><left>Journal Articles</left></span></label>
 <div class="content">
 ::: {#refs_journals}
 :::
@@ -100,7 +101,7 @@ Automated video processing of behavioural assays and applied GC-MS technology to
 </li>
 <li>
 <input type="radio" name="accordion" id="b">
-<label for="b">POSTERS AND CONFERENCE PRESENTATIONS</label>
+<label for="b"><span class = "exptitle"><left>Posters and Conference Presentations</left></span></label>
 <div class="content">
 ::: {#refs_conferences}
 :::
@@ -108,12 +109,22 @@ Automated video processing of behavioural assays and applied GC-MS technology to
 </li>
 <li>
 <input type="radio" name="accordion" id="c">
-<label for="c">INDUSTRY REPORTS</label>
+<label for="c"><span class = "exptitle"><left>Industry Reports</left></span></label>
 <div class="content">
 ::: {#refs_reports}
 :::
 </div>
 </li>
+
+<li>
+<input type="radio" name="accordion" id="d">
+<label for="d"><span class = "exptitle"><left>Other Publications</left></span></label>
+<div class="content">
+::: {#refs_other}
+:::
+</div>
+</li>
+
 </ul>
 
 ### AWARDS AND SCHOLARSHIPS
@@ -130,48 +141,40 @@ Automated video processing of behavioural assays and applied GC-MS technology to
 <ul class="accordion">
 
 <li>
-<input type="radio" name="accordion" id="negativeone-a" checked>
-<label for="negativeone-a"><span class = "mycontainer"><span class = "left">Justice of the Peace (Qualified)</span><span class = "right">X 2023 -- Present</span></span></label>
+<input type="radio" name="accordion" id="negativeone-a">
+<label for="negativeone-a"><span class = "exptitle"><span class = "left">Justice of the Peace (Qualified)</span><span class = "right">Nov 2023 -- Present</span></span></label>
 <div class="content">
 
 </div>
 </li>
 
 <li>
-<input type="radio" name="accordion" id="zeroth-a" checked>
-<label for="zeroth-a"><span class = "mycontainer"><span class = "left">Future Foods Datathon Mentor (QUT)</span><span class = "right">August 2022 - Nov 2022</span></span></label>
+<input type="radio" name="accordion" id="zeroth-a">
+<label for="zeroth-a"><span class = "exptitle"><span class = "left">Future Foods Datathon Mentor | QUT</span><span class = "right">August 2022 - Nov 2022</span></span></label>
 <div class="content">
 
 </div>
 </li>
 
 <li>
-<input type="radio" name="accordion" id="first-a" checked>
-<label for="first-a"><span class = "mycontainer"><span class = "left">Change Champion | QUT</span><span class = "right">May 2022 - Jun 2023</span></span></label>
+<input type="radio" name="accordion" id="first-a">
+<label for="first-a"><span class = "exptitle"><span class = "left">Change Champion | QUT</span><span class = "right">May 2022 - Jun 2023</span></span></label>
 <div class="content">
 A service role supporting the rollout of new HR software in the Faculty of Science
 </div>
 </li>
  
 <li>
-<input type="radio" name="accordion" id="second-a" checked>
-<label for="second-a"><span class = "mycontainer"><span class = "left">Change Champion (QUT)</span><span class = "right">May 2022 - Jun 2023</span></span></label>
-<div class="content">
-A service role supporting the rollout of new HR software in the Faculty of Science
-</div>
-</li>
-
-<li>
-<input type="radio" name="accordion" id="third-a" checked>
-<label for="third-a"><span class = "mycontainer"><span class = "left">AusSynBio Challenge Mentor (QUT)</span><span class = "right">March 2022 -- Present</span></span></label>
+<input type="radio" name="accordion" id="third-a">
+<label for="third-a"><span class = "exptitle"><span class = "left">AusSynBio Challenge Mentor | QUT</span><span class = "right">March 2022 -- Present</span></span></label>
 <div class="content">
 -   Mentored
 </div>
 </li>
 
 <li>
-<input type="radio" name="accordion" id="fourth-a" checked>
-<label for="fourth-a"><span class = "mycontainer"><span class = "left">Lab Demonstrator (QUT)</span><span class = "right">Feb 2022 -- June 2022 </span></span></label>
+<input type="radio" name="accordion" id="fourth-a">
+<label for="fourth-a"><span class = "exptitle"><span class = "left">Lab Demonstrator | QUT</span><span class = "right">Feb 2022 -- June 2022 </span></span></label>
 <div class="content">
 -   Also Feb 2021 -- May 2021, Feb 2020 -- May 2020, Feb 2018 -- May 2018, and Feb 2017 -- May 2017
 -   Mentored small groups of undergraduates through lab work and data analysis in a research-based environmental microbiology subject
@@ -181,8 +184,8 @@ A service role supporting the rollout of new HR software in the Faculty of Scien
 </li>
 
 <li>
-<input type="radio" name="accordion" id="fifth-a" checked>
-<label for="fifth-a"><span class = "mycontainer"><span class = "left">SEF Widening Participation Senior Ambassador (QUT)</span><span class = "right">Jul 2018 -- Sep 2018</span></span></label>
+<input type="radio" name="accordion" id="fifth-a">
+<label for="fifth-a"><span class = "exptitle"><span class = "left">SEF Widening Participation Senior Ambassador | QUT</span><span class = "right">Jul 2018 -- Sep 2018</span></span></label>
 <div class="content">
 -   Delivered engaging presentations and hands-on science workshops to school students, promoting diversity and higher education in STEM fields
 -   Supervised and trained junior ambassadors
@@ -190,23 +193,23 @@ A service role supporting the rollout of new HR software in the Faculty of Scien
 </li>
 
 <li>
-<input type="radio" name="accordion" id="sixth-a" checked>
-<label for="sixth-a"><span class = "mycontainer"><span class = "left">SEF Widening Participation Ambassador (QUT)</span><span class = "right">Feb 2018 -- Jul 2018</span></span></label>
+<input type="radio" name="accordion" id="sixth-a">
+<label for="sixth-a"><span class = "exptitle"><span class = "left">SEF Widening Participation Ambassador | QUT</span><span class = "right">Feb 2018 -- Jul 2018</span></span></label>
 <div class="content">
 </div>
 </li>
  
 <li>
-<input type="radio" name="accordion" id="seventh-a" checked>
-<label for="seventh-a"><span class = "mycontainer"><span class = "left">Note-taker (QUT)</span><span class = "right">Feb 2014 -- Nov 2016</span></span></label>
+<input type="radio" name="accordion" id="seventh-a">
+<label for="seventh-a"><span class = "exptitle"><span class = "left">Note-taker | QUT</span><span class = "right">Feb 2014 -- Nov 2016</span></span></label>
 <div class="content">
 -   Supported Equity Services at QUT by delivering thorough summaries of lectures, tutorials, and labs
 </div>
 </li>
 
 <li>
-<input type="radio" name="accordion" id="eighth-a" checked>
-<label for="eighth-a"><span class = "mycontainer"><span class = "left">Connect Session Facilitator (QUT)</span><span class = "right">2015 -- 2016</span></span></label>
+<input type="radio" name="accordion" id="eighth-a">
+<label for="eighth-a"><span class = "exptitle"><span class = "left">Connect Session Facilitator | QUT</span><span class = "right">2015 -- 2016</span></span></label>
 <div class="content">
 </div>
 </li>

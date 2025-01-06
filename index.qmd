@@ -2,7 +2,7 @@
 title: "About Me"
 image: profile.png
 about:
-  template: broadside
+  template: solana
   links:
       - text: "{{< iconify fa6-brands twitter >}} Twitter"
         href: https://twitter.com/bioboyd
@@ -18,16 +18,8 @@ about:
         href: https://scholar.google.com.au/citations?user=NxovQdsAAAAJ&hl=en
 ---
 
-I lead bioinformatics and computational biology analyses as a senior research
-assistant in the Invertebrate Microbiology Group at QUT. Working with ecological
-datasets, high-throughput sequencing data, bioassays, and more I have the skills
-to conduct complex end-to-end analyses from data cleaning to reporting. I am
-comfortable with the unknown and look for opportunities to work with new types
-of data and address a variety of research questions. Most of my work is
-performed in R or on the command line, but I am frequently adding new tools and
-methods to my workflows. I have a particular interest in microbial ecology,
-having written my master’s thesis on bee symbionts, and a passion for
-Australia’s natural biodiversity more generally.
-
-This website will serve as a place to gather my work, a living CV, and
-potentially a repository for thoughts too big for twitter.
+I am a senior data analyst for the Department of Primary Industries in 
+Queensland, Australia. As part of the Supply Chain Innovation team, I help to 
+improve the quality of fresh fruit delivered to consumers. I have a particular 
+interest in microbial ecology, having written my master’s thesis on bee 
+symbionts, and a passion for Australia’s natural biodiversity more generally.
