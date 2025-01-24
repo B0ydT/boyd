@@ -152,15 +152,7 @@ technology to investigate the effects of fungal volatiles on beetle behaviour.
 <input type="radio" name="accordion" id="negativeone-a">
 <label for="negativeone-a"><span class = "exptitle"><span class = "left">Justice of the Peace (Qualified)</span><span class = "right">Nov 2023 -- Present</span></span></label>
 <div class="content">
-
-</div>
-</li>
-
-<li>
-<input type="radio" name="accordion" id="zeroth-a">
-<label for="zeroth-a"><span class = "exptitle"><span class = "left">Future Foods Datathon Mentor | QUT</span><span class = "right">August 2022 - Nov 2022</span></span></label>
-<div class="content">
-
+Performing JP duties, including acting as an after-hours JP.
 </div>
 </li>
 
@@ -170,6 +162,14 @@ technology to investigate the effects of fungal volatiles on beetle behaviour.
 <div class="content">
 A service role supporting the rollout of new HR software in the Faculty of 
 Science.
+</div>
+</li>
+
+<li>
+<input type="radio" name="accordion" id="zeroth-a">
+<label for="zeroth-a"><span class = "exptitle"><span class = "left">Future Foods Datathon Mentor | QUT</span><span class = "right">August 2022 - Nov 2022</span></span></label>
+<div class="content">
+Mentored two teams, both of which won $20,000 in funding.
 </div>
 </li>
  
@@ -201,7 +201,7 @@ Assessed weekly lab reports and final poster presentations.
 <div class="content">
 Delivered engaging presentations and hands-on science workshops to school 
 students, promoting diversity and higher education in STEM fields. Supervised 
-and trained junior ambassadors
+and trained junior ambassadors.
 </div>
 </li>
 
