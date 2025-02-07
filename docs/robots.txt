@@ -1,1 +1,1 @@
-Sitemap: boyd.tarlinton.au/sitemap.xml
+Sitemap: https://boyd.tarlinton.au/sitemap.xml
