@@ -1,6 +1,8 @@
 [
   {
     "listing": "/listings.html",
-    "items": []
+    "items": [
+      "/posts/quarto_plots.html"
+    ]
   }
 ]

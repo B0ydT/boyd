@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://boyd.tarlinton.au/listings.html</loc>
-    <lastmod>2025-02-07T09:30:56.504Z</lastmod>
+    <lastmod>2025-03-28T13:36:29.513Z</lastmod>
   </url>
   <url>
     <loc>https://boyd.tarlinton.au/index.html</loc>
-    <lastmod>2025-02-07T09:30:56.504Z</lastmod>
+    <lastmod>2025-02-07T10:03:39.226Z</lastmod>
   </url>
   <url>
     <loc>https://boyd.tarlinton.au/cv.html</loc>
@@ -15,5 +15,13 @@
   <url>
     <loc>https://boyd.tarlinton.au/LICENSE.html</loc>
     <lastmod>2022-12-28T08:49:08.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://boyd.tarlinton.au/posts/map_blog.html</loc>
+    <lastmod>2025-03-28T11:15:18.432Z</lastmod>
+  </url>
+  <url>
+    <loc>https://boyd.tarlinton.au/posts/quarto_plots.html</loc>
+    <lastmod>2025-03-28T13:32:24.880Z</lastmod>
   </url>
 </urlset>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Boyd Tarlinton</title>
+<link>https://boyd.tarlinton.au/listings.html</link>
+<atom:link href="https://boyd.tarlinton.au/listings.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.6.42</generator>
+<lastBuildDate>Fri, 28 Mar 2025 14:00:00 GMT</lastBuildDate>
+<item>
+  <title>Three Tips for Better Quarto Plots</title>
+  <dc:creator>Boyd Tarlinton</dc:creator>
+  <link>https://boyd.tarlinton.au/posts/quarto_plots.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>If you regularly create <code>Quarto</code> documents, it s important to ensure that you can incorporate quality figures without spending a long time messing about. These are some of my favourite settings to ensure that my figures look great every time I render a <code>Quarto</code> document.</p>
+<section id="use-showtext-through-knitr" class="level3">
+<h3 class="anchored" data-anchor-id="use-showtext-through-knitr">Use <code>showtext</code> through <code>Knitr</code></h3>
+<p><code>Showtext</code> offers better text rendering, as well as great control over settings such as DPI, which controls text size. Setting up <code>showtext</code> in your <code>Quarto</code> YAML metadata is much easier the calling <code>showtext_begin()</code> and <code>showtext_end()</code> every time you want to produce a plot!</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">---</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">knitr</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-3"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">opts_chunk</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span></span>
+<span id="cb1-4"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fig-showtext</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">true</span></span>
+<span id="cb1-5"><span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">---</span></span></code></pre></div>
+</section>
+<section id="use-google-fonts-with-sysfonts" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="use-google-fonts-with-sysfonts">Use Google Fonts with <code>sysfonts</code></h3>
+<p>Simply calling <code>font_add_google()</code> with your chosen <a href="https://fonts.google.com/">Google Font</a> will make that font available in your R session and will look excellent in your <code>showtext</code>-enabled plots. Using Google Fonts has the added benefit of make your code much more portable.</p>
+<p>Let’s load something a bit wacky:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```{r}</span></span>
+<span id="cb2-2"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">library(sysfonts)</span></span>
+<span id="cb2-3"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">font_add_google("Bungee Tint", db_cache = FALSE)</span></span>
+<span id="cb2-4"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```</span></span></code></pre></div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>You may need to specify <code>db_cache = FALSE</code> for some fonts that have not been cached in your <code>sysfonts</code> install.</p>
+</div></div></section>
+<section id="set-dev-options-in-knitr-chunks" class="level3">
+<h3 class="anchored" data-anchor-id="set-dev-options-in-knitr-chunks">Set dev options in <code>knitr</code> chunks</h3>
+<p>You can set dev arguments in your chunks, again avoiding the (in my opinion) rather clunky dev functions. I typically use this to set a transparent background, but that’s a pretty poor example on a white page. Let’s set a solid background and see how a plot looks with our custom settings!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```{r}</span></span>
+<span id="cb3-2"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#| dev.args: !expr list(bg="beige")</span></span>
+<span id="cb3-3"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#| fig-cap: "An example figure"</span></span>
+<span id="cb3-4"></span>
+<span id="cb3-5"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">library(ggplot2)</span></span>
+<span id="cb3-6"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">data("mtcars")</span></span>
+<span id="cb3-7"></span>
+<span id="cb3-8"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">mtcars |&gt;</span></span>
+<span id="cb3-9"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">  ggplot(aes(x = disp,</span></span>
+<span id="cb3-10"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">             y = mpg)) +</span></span>
+<span id="cb3-11"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">  geom_point() +</span></span>
+<span id="cb3-12"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">  theme(text = element_text(family = "Bungee Tint"),</span></span>
+<span id="cb3-13"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">        panel.background = element_blank(),</span></span>
+<span id="cb3-14"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">        plot.background = element_blank())</span></span>
+<span id="cb3-15"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```</span></span></code></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://boyd.tarlinton.au/posts/quarto_plots_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="384"></p>
+<figcaption>An example figure</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>R</category>
+  <guid>https://boyd.tarlinton.au/posts/quarto_plots.html</guid>
+  <pubDate>Fri, 28 Mar 2025 14:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

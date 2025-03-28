@@ -24,3 +24,5 @@ website:
         href: https://orcid.org/0000-0002-4146-7083
       - text: "{{< iconify fa6-brands google-scholar size=large >}}"
         href: https://scholar.google.com.au/citations?user=NxovQdsAAAAJ&hl=en
+      - text: "{{< iconify fa6-solid rss size=large >}}"
+        href: listings.xml
