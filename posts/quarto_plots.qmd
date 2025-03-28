@@ -59,7 +59,7 @@ You may need to specify `db_cache = FALSE` for some fonts that have not been
 cached in your `sysfonts` install.
 :::
 
-### Set dev options in `knitr` chunks
+### Set dev options in `Knitr` chunks
 
 You can set dev arguments in your chunks, again avoiding the (in my opinion) 
 rather clunky dev functions. I typically use this to set a transparent 

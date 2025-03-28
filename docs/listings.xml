@@ -82,7 +82,7 @@ font-style: inherit;">```</span></span></code></pre></div>
 <p>You may need to specify <code>db_cache = FALSE</code> for some fonts that have not been cached in your <code>sysfonts</code> install.</p>
 </div></div></section>
 <section id="set-dev-options-in-knitr-chunks" class="level3">
-<h3 class="anchored" data-anchor-id="set-dev-options-in-knitr-chunks">Set dev options in <code>knitr</code> chunks</h3>
+<h3 class="anchored" data-anchor-id="set-dev-options-in-knitr-chunks">Set dev options in <code>Knitr</code> chunks</h3>
 <p>You can set dev arguments in your chunks, again avoiding the (in my opinion) rather clunky dev functions. I typically use this to set a transparent background, but that’s a pretty poor example on a white page. Let’s set a solid background and see how a plot looks with our custom settings!</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><span class="in" style="color: #5E5E5E;
