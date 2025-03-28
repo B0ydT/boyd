@@ -9,8 +9,6 @@ knitr:
   opts_chunk: 
     fig-showtext: true
     warning: false
-    dev.args:
-      bg: yellow
 format: 
   html:
     fig-width: 4
