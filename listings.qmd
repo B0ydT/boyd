@@ -14,3 +14,5 @@ page-layout: full
 title-block-banner: false
 ---
 
+
+For more `R` content, check out [R-bloggers](http://www.R-bloggers.com).
