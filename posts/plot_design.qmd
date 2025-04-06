@@ -2,7 +2,7 @@
 title: "Three Tips for Better R Figures"
 description: "More effective and readable plots"
 author: "Boyd Tarlinton"
-date: "2025/03/29"
+date: "2025/04/06"
 categories:
   - R
 knitr:

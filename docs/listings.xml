@@ -10,7 +10,7 @@
 <atom:link href="https://boyd.tarlinton.au/listings.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.6.42</generator>
-<lastBuildDate>Fri, 28 Mar 2025 14:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 05 Apr 2025 14:00:00 GMT</lastBuildDate>
 <item>
   <title>Three Tips for Better R Figures</title>
   <dc:creator>Boyd Tarlinton</dc:creator>
@@ -192,7 +192,7 @@ font-style: inherit;">```</span></span></code></pre></div>
  ]]></description>
   <category>R</category>
   <guid>https://boyd.tarlinton.au/posts/plot_design.html</guid>
-  <pubDate>Fri, 28 Mar 2025 14:00:00 GMT</pubDate>
+  <pubDate>Sat, 05 Apr 2025 14:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Three Tips for Better Quarto Plots</title>
