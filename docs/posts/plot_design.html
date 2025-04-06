@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Boyd Tarlinton">
+<meta name="dcterms.date" content="2025-03-29">
+<meta name="description" content="More effective and readable plots">
 
-<title>About Me – Boyd Tarlinton</title>
+<title>Three Tips for Better R Figures – Boyd Tarlinton</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +23,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-df479d6c4d77d0e0dfbcb5361179d7fd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="site_libs/quarto-contrib/iconify-1.0.8/iconify-icon.min.js"></script>
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-df479d6c4d77d0e0dfbcb5361179d7fd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/iconify-1.0.8/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Boyd Tarlinton</span>
     </a>
   </div>
@@ -88,11 +126,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./listings.html"> 
+    <a class="nav-link" href="../listings.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
@@ -120,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text"><iconify-icon inline="" icon="fa6-brands:google-scholar" style="font-size: 1.2em;"></iconify-icon></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./listings.xml"> 
+    <a class="nav-link" href="../listings.xml"> 
 <span class="menu-text"><iconify-icon inline="" icon="fa6-solid:rss" style="font-size: 1.2em;"></iconify-icon></span></a>
   </li>  
 </ul>
@@ -136,49 +174,135 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-solana column-body">
-  <div class="about-entity">
-    <div class="entity-contents">
-      <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About Me</h1>
+<h1 class="title">Three Tips for Better R Figures</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    More effective and readable plots
+  </div>
 </div>
+
+
 <div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Boyd Tarlinton </p>
+          </div>
   </div>
-</header> <div class="about-links">
-  <a href="https://twitter.com/bioboyd" class="about-link" rel="" target="">
-     <span class="about-link-text"><iconify-icon inline="" icon="fa6-brands:twitter"></iconify-icon> Twitter</span>
-  </a>
-  <a href="https://www.linkedin.com/in/boyd-tarlinton/" class="about-link" rel="" target="">
-     <span class="about-link-text"><iconify-icon inline="" icon="fa6-brands:linkedin"></iconify-icon> LinkedIn</span>
-  </a>
-  <a href="https://github.com/B0ydT/" class="about-link" rel="" target="">
-     <span class="about-link-text"><iconify-icon inline="" icon="fa6-brands:github"></iconify-icon> GitHub</span>
-  </a>
-  <a href="mailto:b2.tarlinton@qut.edu.au" class="about-link" rel="" target="">
-     <span class="about-link-text"><iconify-icon inline="" icon="fa6-solid:at"></iconify-icon> Email</span>
-  </a>
-  <a href="https://orcid.org/0000-0002-4146-7083" class="about-link" rel="" target="">
-     <span class="about-link-text"><iconify-icon inline="" icon="fa6-brands:orcid"></iconify-icon> ORCID</span>
-  </a>
-  <a href="https://scholar.google.com.au/citations?user=NxovQdsAAAAJ&amp;hl=en" class="about-link" rel="" target="">
-     <span class="about-link-text"><iconify-icon inline="" icon="fa6-brands:google-scholar"></iconify-icon> Google Scholar</span>
-  </a>
-  <a href="/listings.xml" class="about-link" rel="" target="">
-     <span class="about-link-text"><iconify-icon inline="" icon="fa6-solid:rss"></iconify-icon> RSS</span>
-  </a>
-</div>
-      <div class="about-contents"><main class="content" id="quarto-document-content">
-<p>I am a senior data analyst for the Department of Primary Industries in Queensland, Australia. As part of the Supply Chain Innovation team, I help to improve the quality of fresh fruit delivered to consumers. I have a particular interest in microbial ecology, having written my master’s thesis on bee symbionts, and a passion for Australia’s natural biodiversity more generally.</p>
-
-
-</main></div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 29, 2025</p>
     </div>
-    <img src="profile.png" class="about-image
-  rounded " style="width: 15em;">
   </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Recently I shared my favourite ways to <a href="../posts/quarto_plots.html">ensure your R plots look great in <code>Quarto</code> documents</a>. Now I want to share my most commonly used tips for building effective and readable plots in <code>R</code>.</p>
+<p>As an example dataset I’ll be using chip_dataset.csv, downloaded from <a href="https://chip-dataset.vercel.app/">Vercel</a>. Redistribution of the dataset is not permitted.</p>
+<p>Let’s create a rough figure, and see how we can improve it in a few simple steps.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "A rough figure"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="in">library(ggplot2)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="in">library(dplyr)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="in">library(lubridate)</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="in">chips &lt;- read.csv("chip_dataset.csv")</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="in">chips &lt;- chips |&gt; </span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="in">  mutate(Date = mdy(Release.Date),</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="in">         transistors = as.numeric(Transistors..million.)) |&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="in">  filter(Foundry != "" &amp;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="in">           Type == "GPU" &amp;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="in">           !is.na(Date) &amp;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="in">           !is.na(transistors))</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="in">chips |&gt; </span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="in">  ggplot(aes(x = Date, </span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="in">           y = transistors, </span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="in">           color = Foundry)) +</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="in">    geom_point()</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plot_design_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>A rough figure</figcaption>
+</figure>
 </div>
- <!-- /main -->
+</div>
+</div>
+<section id="pick-a-great-base-theme" class="level3">
+<h3 class="anchored" data-anchor-id="pick-a-great-base-theme">Pick a great base theme</h3>
+<p>With <code>R</code> being more popular than ever, the default <code>ggplot2</code> theme is <em>everywhere</em>. In addition to being overused, the grey background can be a bit much. <code>ggplot2::theme_minimal</code> is an easy substitute and a great base for further customisation, but I really like <code>hrbrthemes::theme_ipsum</code>.</p>
+</section>
+<section id="use-an-effective-colour-palette" class="level3">
+<h3 class="anchored" data-anchor-id="use-an-effective-colour-palette">Use an effective colour palette</h3>
+<p>Effective use of colour can ensure that your plots are able to be interpreted at a glance. The <code>viridis</code> palettes help to ensure that different values are distinct, and are colourblind-friendly. Like the base <code>ggplot2</code> theme, <code>viridis</code> palettes are everywhere, but it’s a hard choice to argue with!</p>
+</section>
+<section id="modify-your-theme" class="level3">
+<h3 class="anchored" data-anchor-id="modify-your-theme">Modify your theme</h3>
+<p>Even though we’ve chosen a great theme, it’s still important to consider whether it perfectly suits you needs. For example, I often like to drop the x-axis gridlines for a cleaner look. I will also place the legend below the plot, to allow the main contents to fill the page.</p>
+<p>We’ll apply the tips described above, as well as rescaling the y-axis and adding some trendlines. Do you think this is a more effective figure?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: feature-image</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-cap: "The final figure"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="in">library(hrbrthemes)</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="in">library(sysfonts)</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="in">library(viridis)</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="in">library(scales)</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="in">font_add_google("Roboto Condensed")</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="in">chips |&gt;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="in">  ggplot(aes(x = Date, y = transistors, color = Foundry)) +</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_point(alpha = 0.2) +</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_smooth(method = "lm", se = FALSE, alpha = 0.5) +</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="in">  scale_colour_viridis_d(option = "H", direction = -1) +</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="in">  scale_y_log10(labels = label_number()) +</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="in">  theme_ipsum_rc(axis_title_size = 12) +</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="in">  theme(legend.position = "bottom",</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="in">        panel.grid.major.x = element_blank(),</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="in">        panel.grid.minor.x = element_blank()) +</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="in">  labs(y = "Transistors (millions)",</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="in">       title = "GPU Transistor Count by Release Date",</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="in">       subtitle = "Data from https://chip-dataset.vercel.app/")</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="plot_design_files/figure-html/feature-image-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>The final figure</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -199,6 +323,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

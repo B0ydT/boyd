@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://boyd.tarlinton.au/posts/quarto_plots.html</loc>
+    <lastmod>2025-03-28T23:08:45.632Z</lastmod>
+  </url>
+  <url>
     <loc>https://boyd.tarlinton.au/listings.html</loc>
     <lastmod>2025-03-28T13:36:29.513Z</lastmod>
   </url>
@@ -17,11 +21,7 @@
     <lastmod>2022-12-28T08:49:08.192Z</lastmod>
   </url>
   <url>
-    <loc>https://boyd.tarlinton.au/posts/map_blog.html</loc>
-    <lastmod>2025-03-28T11:15:18.432Z</lastmod>
-  </url>
-  <url>
-    <loc>https://boyd.tarlinton.au/posts/quarto_plots.html</loc>
-    <lastmod>2025-03-28T23:08:45.632Z</lastmod>
+    <loc>https://boyd.tarlinton.au/posts/plot_design.html</loc>
+    <lastmod>2025-04-06T02:03:46.580Z</lastmod>
   </url>
 </urlset>

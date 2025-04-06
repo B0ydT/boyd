@@ -2,6 +2,7 @@
   {
     "listing": "/listings.html",
     "items": [
+      "/posts/plot_design.html",
       "/posts/quarto_plots.html"
     ]
   }
