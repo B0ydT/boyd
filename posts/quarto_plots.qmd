@@ -3,6 +3,7 @@ title: "Three Tips for Better Quarto Plots"
 description: "Simple methods for higher-quality figures"
 author: "Boyd Tarlinton"
 date: "2025/03/29"
+date-modified: "2025/04/09"
 categories:
   - R
 knitr:
@@ -66,6 +67,7 @@ background and see how a plot looks with our custom settings!
 
 ```{r}
 #| echo: fenced
+#| dev: "CairoPNG" 
 #| dev.args: !expr list(bg="beige")
 #| fig-cap: "An example figure"
 
