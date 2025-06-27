@@ -10,7 +10,45 @@
 <atom:link href="https://boyd.tarlinton.au/listings.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.6.42</generator>
-<lastBuildDate>Sat, 05 Apr 2025 14:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 26 Jun 2025 14:00:00 GMT</lastBuildDate>
+<item>
+  <title>Beyond the Basics: Books to Supercharge Your R Skills</title>
+  <dc:creator>Boyd Tarlinton</dc:creator>
+  <link>https://boyd.tarlinton.au/posts/r_books.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="page-columns page-full"><p>There are a plethora of great books that are widely recommended for the beginner R user, but I many users often find their skills plateauing once they learn just enough to get by on a day-to-day basis. These are some of the books that helped me to break through that plateau and take full advantage of R. </p><div class="no-row-height column-margin column-container"><span class="margin-aside">And doesn’t it reflect well on the R community that all of these books are available for free?</span></div></div>
+<section id="advanced-r" class="level3">
+<h3 class="anchored" data-anchor-id="advanced-r"><a href="https://adv-r.hadley.nz/index.html">Advanced R</a></h3>
+<p>Advanced R is the best one stop shop for everything about R that your introductory courses and textbooks didn’t teach you. It is a relatively dense book and, if you’re like me, it might not be immediately clear why some of the techniques and strategies are so valuable. By at least browsing the entire book, you will gain a much better understanding of what advanced programming strategies are available to you in R. If you can recognise when these techniques are needed in your own work you can revisit the relevant chapters as needed.</p>
+</section>
+<section id="the-r-inferno" class="level3">
+<h3 class="anchored" data-anchor-id="the-r-inferno"><a href="https://www.burns-stat.com/documents/books/the-r-inferno/">The R Inferno</a></h3>
+<p>I often learn from making mistakes, fixing them, and learning to avoid them in the future. The R Inferno helped me avoid a lot of mistakes, pointing out a lot of R’s sharpest edges and how to avoid them. It is not necessarily a book that you should work through like a textbook – it is another dense book, and it helps to reflect on chapters as you work on some relevant code. This is one book that I often revisit, finding more to take away each time.</p>
+</section>
+<section id="r-packages" class="level3">
+<h3 class="anchored" data-anchor-id="r-packages"><a href="https://r-pkgs.org/">R Packages</a></h3>
+<p>Given his massive contributions to R in general and the <code>tidyverse</code>, it is no surprise that Hadley Wickham is an author of two entries on this list (the other being Advanced R). Even if you don’t intend to create and publish R packages for others to use, they can be an incredibly valuable part of your workflow. Making your code portable and reusable can yield massive efficiencies, and knowing how R packages work under the hood can make debugging code or contributing to open-source software much easier. Now in its second edition, R Packages should be your go to for anything related to… R packages.</p>
+</section>
+<section id="building-reproducible-analytical-pipelines-with-r-raps-with-r" class="level3">
+<h3 class="anchored" data-anchor-id="building-reproducible-analytical-pipelines-with-r-raps-with-r"><a href="https://raps-with-r.dev/">Building Reproducible Analytical Pipelines With R (RAPs With R)</a></h3>
+<p>The most recently published book on this list, RAPs with R has quickly become one of my favourites, collecting some of the highest yield strategies the data scientist or analyst can implement to ensure reproducibility in their work. This is an incredibly readable book that you can sit down and work through from start to finish, following along with practical examples. The section on Git is incredibly useful for R users, who typically aren’t exposed to version control in introductory courses. RAPS with R also helps illustrate how writing functions and packages should be part of any R user’s workflow, whileI have found the section on deploying R code in docker containers particularly valuable in my own work.</p>
+</section>
+<section id="engineering-production-grade-shiny-apps" class="level3">
+<h3 class="anchored" data-anchor-id="engineering-production-grade-shiny-apps"><a href="https://engineering-shiny.org/index.html">Engineering Production-Grade Shiny Apps</a></h3>
+<p>This final entry is different from the others in that I wouldn’t necessarily recommend it to every user – it is really only useful for those trying to make interactive <code>shiny</code> applications. That said, it is so good for that purpose that I wanted to highlight it. The <code>golem</code> approach to <code>shiny</code> applications championed by this book is a total game changer. Writing clean, modular code, and making use of the bundled deployment tools makes building interactive applications much less stressful. If you’re looking to make your R code useful to a wider audience through interactive applications, this could be a game changer.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>R</category>
+  <guid>https://boyd.tarlinton.au/posts/r_books.html</guid>
+  <pubDate>Thu, 26 Jun 2025 14:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Three Tips for Better R Figures</title>
   <dc:creator>Boyd Tarlinton</dc:creator>
