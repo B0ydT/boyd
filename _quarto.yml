@@ -15,8 +15,6 @@ website:
       - text: Blog
         href: listings.qmd
       - cv.qmd
-      - text: "{{< iconify fa6-brands twitter size=large >}}"
-        href: https://twitter.com/bioboyd
       - text: "{{< iconify fa6-brands linkedin size=large >}}"
         href: https://www.linkedin.com/in/boyd-tarlinton/
       - text: "{{< iconify fa6-brands github size=large >}}"

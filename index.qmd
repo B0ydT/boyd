@@ -4,8 +4,6 @@ image: profile.png
 about:
   template: solana
   links:
-      - text: "{{< iconify fa6-brands twitter >}} Twitter"
-        href: https://twitter.com/bioboyd
       - text: "{{< iconify fa6-brands linkedin >}} LinkedIn"
         href: https://www.linkedin.com/in/boyd-tarlinton/
       - text: "{{< iconify fa6-brands github >}} GitHub"
