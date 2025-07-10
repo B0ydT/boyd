@@ -57,7 +57,7 @@ infrastructure for bioinformatics.
 <div class="content">
 Modelled the influence of bee colony strength on hive temperature. Used GC-MS 
 and SIFT-MS methods to identify volatile compounds associated with 
-mealybug-induced pasture dieback
+mealybug-induced pasture dieback.
 </div>
 </li>
 <li>
@@ -82,7 +82,7 @@ Developed tools for reproducible metabolomics research in R.
 Contributed to collaborative projects developing fungal and viral biocontrol 
 agents to manage invasive insect species. Maintained insect colonies, 
 assisted with bioassays, cultured microorganisms, and used molecular techniques 
-including PCR and gel electrophoresis
+including PCR and gel electrophoresis.
 </div>
 </li>
 <li>
