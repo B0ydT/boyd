@@ -33,3 +33,4 @@ website:
         href: https://scholar.google.com.au/citations?user=NxovQdsAAAAJ&hl=en
       - text: "{{< iconify fa6-solid rss size=large >}}"
         href: listings.xml
+  google-analytics: "G-7PC836DWQK"
