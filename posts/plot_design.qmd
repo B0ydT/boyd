@@ -52,7 +52,6 @@ chips |>
     geom_point()
 ```
 
-
 ### Pick a great base theme
 
 With `R` being more popular than ever, the default `ggplot2` theme is 

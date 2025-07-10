@@ -61,8 +61,7 @@
 <p>Recently I shared my favourite ways to <a href="../posts/quarto_plots.html">ensure your R plots look great in <code>Quarto</code> documents</a>. Now I want to share my most commonly used tips for building effective and readable plots in <code>R</code>.</p>
 <p>As an example dataset I’ll be using chip_dataset.csv, downloaded from <a href="https://chip-dataset.vercel.app/">Vercel</a>. Redistribution of the dataset is not permitted.</p>
 <p>Let’s create a rough figure, and see how we can improve it in a few simple steps.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><span class="in" style="color: #5E5E5E;
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">```{r}</span></span>
 <span id="cb1-2"><span class="in" style="color: #5E5E5E;
@@ -70,71 +69,65 @@ background-color: null;
 font-style: inherit;">#| dev: "CairoPNG" </span></span>
 <span id="cb1-3"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">#| fig-cap: "A rough figure"</span></span>
-<span id="cb1-4"></span>
-<span id="cb1-5"><span class="in" style="color: #5E5E5E;
+font-style: inherit;">#| echo: fenced</span></span>
+<span id="cb1-4"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">library(ggplot2)</span></span>
+font-style: inherit;">#| fig-cap: "A rough figure"</span></span>
+<span id="cb1-5"></span>
 <span id="cb1-6"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">library(dplyr)</span></span>
+font-style: inherit;">library(ggplot2)</span></span>
 <span id="cb1-7"><span class="in" style="color: #5E5E5E;
 background-color: null;
+font-style: inherit;">library(dplyr)</span></span>
+<span id="cb1-8"><span class="in" style="color: #5E5E5E;
+background-color: null;
 font-style: inherit;">library(lubridate)</span></span>
-<span id="cb1-8"></span>
-<span id="cb1-9"><span class="in" style="color: #5E5E5E;
+<span id="cb1-9"></span>
+<span id="cb1-10"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">chips &lt;- read.csv("chip_dataset.csv")</span></span>
-<span id="cb1-10"></span>
-<span id="cb1-11"><span class="in" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">chips &lt;- chips |&gt; </span></span>
+<span id="cb1-11"></span>
 <span id="cb1-12"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">  mutate(Date = mdy(Release.Date),</span></span>
+font-style: inherit;">chips &lt;- chips |&gt; </span></span>
 <span id="cb1-13"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">         transistors = as.numeric(Transistors..million.)) |&gt;</span></span>
+font-style: inherit;">  mutate(Date = mdy(Release.Date),</span></span>
 <span id="cb1-14"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">  filter(Foundry != "" &amp;</span></span>
+font-style: inherit;">         transistors = as.numeric(Transistors..million.)) |&gt;</span></span>
 <span id="cb1-15"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">           Type == "GPU" &amp;</span></span>
+font-style: inherit;">  filter(Foundry != "" &amp;</span></span>
 <span id="cb1-16"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">           !is.na(Date) &amp;</span></span>
+font-style: inherit;">           Type == "GPU" &amp;</span></span>
 <span id="cb1-17"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">           !is.na(transistors))</span></span>
-<span id="cb1-18"></span>
-<span id="cb1-19"><span class="in" style="color: #5E5E5E;
+font-style: inherit;">           !is.na(Date) &amp;</span></span>
+<span id="cb1-18"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">chips |&gt; </span></span>
+font-style: inherit;">           !is.na(transistors))</span></span>
+<span id="cb1-19"></span>
 <span id="cb1-20"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">  ggplot(aes(x = Date, </span></span>
+font-style: inherit;">chips |&gt; </span></span>
 <span id="cb1-21"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">           y = transistors, </span></span>
+font-style: inherit;">  ggplot(aes(x = Date, </span></span>
 <span id="cb1-22"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">           color = Foundry)) +</span></span>
+font-style: inherit;">           y = transistors, </span></span>
 <span id="cb1-23"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">    geom_point()</span></span>
+font-style: inherit;">           color = Foundry)) +</span></span>
 <span id="cb1-24"><span class="in" style="color: #5E5E5E;
 background-color: null;
+font-style: inherit;">    geom_point()</span></span>
+<span id="cb1-25"><span class="in" style="color: #5E5E5E;
+background-color: null;
 font-style: inherit;">```</span></span></code></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://boyd.tarlinton.au/posts/plot_design_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption>A rough figure</figcaption>
-</figure>
-</div>
-</div>
-</div>
 <section id="pick-a-great-base-theme" class="level3">
 <h3 class="anchored" data-anchor-id="pick-a-great-base-theme">Pick a great base theme</h3>
 <p>With <code>R</code> being more popular than ever, the default <code>ggplot2</code> theme is <em>everywhere</em>. In addition to being overused, the grey background can be a bit much. <code>ggplot2::theme_minimal</code> is an easy substitute and a great base for further customisation, but I really like <code>hrbrthemes::theme_ipsum</code>.</p>
@@ -147,8 +140,7 @@ font-style: inherit;">```</span></span></code></pre></div>
 <h3 class="anchored" data-anchor-id="modify-your-theme">Modify your theme</h3>
 <p>Even though we’ve chosen a great theme, it’s still important to consider whether it perfectly suits you needs. For example, I often like to drop the x-axis gridlines for a cleaner look. I will also place the legend below the plot, to allow the main contents to fill the page.</p>
 <p>We’ll apply the tips described above, as well as rescaling the y-axis and adding some trendlines. Do you think this is a more effective figure?</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><span class="in" style="color: #5E5E5E;
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">```{r}</span></span>
 <span id="cb2-2"><span class="in" style="color: #5E5E5E;
@@ -159,76 +151,70 @@ background-color: null;
 font-style: inherit;">#| label: feature-image</span></span>
 <span id="cb2-4"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">#| fig-cap: "The final figure"</span></span>
-<span id="cb2-5"></span>
-<span id="cb2-6"><span class="in" style="color: #5E5E5E;
+font-style: inherit;">#| echo: fenced</span></span>
+<span id="cb2-5"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">library(hrbrthemes)</span></span>
+font-style: inherit;">#| fig-cap: "The final figure"</span></span>
+<span id="cb2-6"></span>
 <span id="cb2-7"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">library(sysfonts)</span></span>
+font-style: inherit;">library(hrbrthemes)</span></span>
 <span id="cb2-8"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">library(viridis)</span></span>
+font-style: inherit;">library(sysfonts)</span></span>
 <span id="cb2-9"><span class="in" style="color: #5E5E5E;
 background-color: null;
+font-style: inherit;">library(viridis)</span></span>
+<span id="cb2-10"><span class="in" style="color: #5E5E5E;
+background-color: null;
 font-style: inherit;">library(scales)</span></span>
-<span id="cb2-10"></span>
-<span id="cb2-11"><span class="in" style="color: #5E5E5E;
+<span id="cb2-11"></span>
+<span id="cb2-12"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">font_add_google("Roboto Condensed")</span></span>
-<span id="cb2-12"></span>
-<span id="cb2-13"><span class="in" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">chips |&gt;</span></span>
+<span id="cb2-13"></span>
 <span id="cb2-14"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">  ggplot(aes(x = Date, y = transistors, color = Foundry)) +</span></span>
+font-style: inherit;">chips |&gt;</span></span>
 <span id="cb2-15"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">  geom_point(alpha = 0.2) +</span></span>
+font-style: inherit;">  ggplot(aes(x = Date, y = transistors, color = Foundry)) +</span></span>
 <span id="cb2-16"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">  geom_smooth(method = "lm", se = FALSE, alpha = 0.5) +</span></span>
+font-style: inherit;">  geom_point(alpha = 0.2) +</span></span>
 <span id="cb2-17"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">  scale_colour_viridis_d(option = "H", direction = -1) +</span></span>
+font-style: inherit;">  geom_smooth(method = "lm", se = FALSE, alpha = 0.5) +</span></span>
 <span id="cb2-18"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">  scale_y_log10(labels = label_number()) +</span></span>
+font-style: inherit;">  scale_colour_viridis_d(option = "H", direction = -1) +</span></span>
 <span id="cb2-19"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">  theme_ipsum_rc(axis_title_size = 12) +</span></span>
+font-style: inherit;">  scale_y_log10(labels = label_number()) +</span></span>
 <span id="cb2-20"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">  theme(legend.position = "bottom",</span></span>
+font-style: inherit;">  theme_ipsum_rc(axis_title_size = 12) +</span></span>
 <span id="cb2-21"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">        panel.grid.major.x = element_blank(),</span></span>
+font-style: inherit;">  theme(legend.position = "bottom",</span></span>
 <span id="cb2-22"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">        panel.grid.minor.x = element_blank()) +</span></span>
+font-style: inherit;">        panel.grid.major.x = element_blank(),</span></span>
 <span id="cb2-23"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">  labs(y = "Transistors (millions)",</span></span>
+font-style: inherit;">        panel.grid.minor.x = element_blank()) +</span></span>
 <span id="cb2-24"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">       title = "GPU Transistor Count by Release Date",</span></span>
+font-style: inherit;">  labs(y = "Transistors (millions)",</span></span>
 <span id="cb2-25"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">       subtitle = "Data from https://chip-dataset.vercel.app/")</span></span>
+font-style: inherit;">       title = "GPU Transistor Count by Release Date",</span></span>
 <span id="cb2-26"><span class="in" style="color: #5E5E5E;
 background-color: null;
+font-style: inherit;">       subtitle = "Data from https://chip-dataset.vercel.app/")</span></span>
+<span id="cb2-27"><span class="in" style="color: #5E5E5E;
+background-color: null;
 font-style: inherit;">```</span></span></code></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://boyd.tarlinton.au/posts/plot_design_files/figure-html/feature-image-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption>The final figure</figcaption>
-</figure>
-</div>
-</div>
-</div>
 
 
 </section>

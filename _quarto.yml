@@ -7,6 +7,12 @@ format:
     theme: 
       dark: [darkly, styles-dark.scss]
       light: sandstone
+    header-includes: |
+      <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css2?family=Fira+Sans" type="text/css"/>
+      <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css2?family=Fira+Code" type="text/css"/>
+    mainfont: "Fira Sans"
+    monofont: "Fira Code"
+highlight-style: dracula
 website:
   title: "Boyd Tarlinton"
   site-url: https://boyd.tarlinton.au
