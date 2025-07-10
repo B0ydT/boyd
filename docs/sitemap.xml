@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://boyd.tarlinton.au/posts/quarto_plots.html</loc>
-    <lastmod>2025-04-09T08:23:03.827Z</lastmod>
-  </url>
-  <url>
-    <loc>https://boyd.tarlinton.au/listings.html</loc>
-    <lastmod>2025-04-06T02:17:41.433Z</lastmod>
-  </url>
-  <url>
-    <loc>https://boyd.tarlinton.au/index.html</loc>
-    <lastmod>2025-02-07T10:03:39.226Z</lastmod>
-  </url>
-  <url>
-    <loc>https://boyd.tarlinton.au/cv.html</loc>
-    <lastmod>2025-01-24T06:36:00.934Z</lastmod>
-  </url>
-  <url>
-    <loc>https://boyd.tarlinton.au/LICENSE.html</loc>
-    <lastmod>2022-12-28T08:49:08.192Z</lastmod>
+    <loc>https://boyd.tarlinton.au/posts/r_books.html</loc>
+    <lastmod>2025-06-27T04:41:30.825Z</lastmod>
   </url>
   <url>
     <loc>https://boyd.tarlinton.au/posts/plot_design.html</loc>
     <lastmod>2025-04-09T08:23:13.283Z</lastmod>
   </url>
   <url>
-    <loc>https://boyd.tarlinton.au/posts/r_books.html</loc>
-    <lastmod>2025-06-27T04:41:30.825Z</lastmod>
+    <loc>https://boyd.tarlinton.au/LICENSE.html</loc>
+    <lastmod>2022-12-28T08:49:08.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://boyd.tarlinton.au/cv.html</loc>
+    <lastmod>2025-01-24T06:36:00.934Z</lastmod>
+  </url>
+  <url>
+    <loc>https://boyd.tarlinton.au/index.html</loc>
+    <lastmod>2025-02-07T10:03:39.226Z</lastmod>
+  </url>
+  <url>
+    <loc>https://boyd.tarlinton.au/listings.html</loc>
+    <lastmod>2025-04-06T02:17:41.433Z</lastmod>
+  </url>
+  <url>
+    <loc>https://boyd.tarlinton.au/posts/quarto_plots.html</loc>
+    <lastmod>2025-04-09T08:23:03.827Z</lastmod>
   </url>
 </urlset>

@@ -3,7 +3,10 @@ project:
   output-dir: docs
 format:
   html:
-    theme: sandstone
+    respect-user-color-scheme: true
+    theme: 
+      dark: [darkly, styles-dark.scss]
+      light: sandstone
 website:
   title: "Boyd Tarlinton"
   site-url: https://boyd.tarlinton.au
