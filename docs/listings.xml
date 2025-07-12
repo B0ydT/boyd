@@ -10,7 +10,147 @@
 <atom:link href="https://boyd.tarlinton.au/listings.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.6.42</generator>
-<lastBuildDate>Thu, 26 Jun 2025 14:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 11 Jul 2025 14:00:00 GMT</lastBuildDate>
+<item>
+  <title>Apply the Dracula Theme to Quarto Websites</title>
+  <dc:creator>Boyd Tarlinton</dc:creator>
+  <link>https://boyd.tarlinton.au/posts/dracula_theme.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I am something of a <a href="https://draculatheme.com/">Dracula theme</a> fanatic. After first discovering the open-source theme in RStudio, I had to see if it was supported by other applications. To my delight, I found custom Dracula themes for over 400 applications. Applying these themes to my OS, IDEs, browsers, and other applications is now the first thing I do when I install a new tool or set up a computer. I’ve even gone so far as to get <a href="https://oblotzky.industries/products/gmk-cyl-dracula-v2">Dracula keycaps for my mechanical keyboard</a>.</p>
+<p>When I decided to add dark mode to my <code>Quarto</code> website, Dracula was the obvious choice. But, given the wide-ranging support for the theme, I was surprised to discover there was no pre-packaged Bootstrap theme which I could plug into <code>Quarto</code>. Of course, I wasn’t going to let that stop me!</p>
+<p>Starting with the <a href="https://bootswatch.com/darkly/">Darkly theme from Bootswatch</a> as a base, I customised the theme to incorporate the <a href="https://draculatheme.com/contribute#color-palette">Dracula palette</a> using the handy <a href="https://www.bootstrap-live-customizer.com/">Bootstrap Live Customizer</a> tool, before exporting the resulting LESS code and converting it to the SCSS required by <code>Quarto</code>. I had to remove a few variables which seemed to cause issues when rendering. After a few additional tweaks, I was left with a Dracula themed sight that felt like home. You can access the SCSS file <a href="https://github.com/B0ydT/boyd/blob/main/styles-dark.scss">here</a>. If you’re reading this post through an aggregator, you can see it in action on my original post.</p>
+<p>There are a few things to consider when adding the Dracula theme to your own <code>Quarto</code> site. Not all viewers prefer the dark mode experience, so I prefer to let the user decide. In the snippet from my site-wide YAML configuration below, the user is offered a choice between a light and dark mode (Darkly + Dracula), but the website defaults to the user’s system preference. I also specified a custom font to be used across both themes, as I wanted to minimize changes besides colour when switching between themes. As a final touch, specify Dracula code highlighting if you are going to be including code chunks. You may optionally include a styles.css file in the root directory of the project,<br>
+incorporating other style changes that are applied across both themes.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">---</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">format</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-3"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">html</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span></span>
+<span id="cb1-4"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">respect-user-color-scheme</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">true</span></span>
+<span id="cb1-5"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span></span>
+<span id="cb1-6"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dark</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">[</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">darkly</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">,</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> styles-dark.scss</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">]</span></span>
+<span id="cb1-7"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">light</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> sandstone</span></span>
+<span id="cb1-8"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">    header-includes</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">: </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">|</span></span>
+<span id="cb1-9">      &lt;link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css2?family=Fira+Sans" type="text/css"/&gt;</span>
+<span id="cb1-10">      &lt;link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css2?family=Fira+Code" type="text/css"/&gt;</span>
+<span id="cb1-11"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mainfont</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Fira Sans"</span></span>
+<span id="cb1-12"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">monofont</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Fira Code"</span></span>
+<span id="cb1-13"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">highlight-style</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Dracula</span></span>
+<span id="cb1-14"><span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">---</span></span></code></pre></div>
+<p>Hopefully this will be of use to some other Dracula diehards out there. I’m sure I will continue to tweak the SCSS file as I spot opportunities for improvement.</p>
+
+
+
+ ]]></description>
+  <category>R</category>
+  <guid>https://boyd.tarlinton.au/posts/dracula_theme.html</guid>
+  <pubDate>Fri, 11 Jul 2025 14:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Beyond the Basics: Books to Supercharge Your R Skills</title>
   <dc:creator>Boyd Tarlinton</dc:creator>

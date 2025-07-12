@@ -1,0 +1,67 @@
+---
+title: "Apply the Dracula Theme to Quarto Websites"
+description: "And how to get the most out of dark mode"
+author: "Boyd Tarlinton"
+date: "2025/07/12"
+categories:
+  - R
+---
+
+I am something of a [Dracula theme]( https://draculatheme.com/) fanatic. 
+After first discovering the open-source theme in RStudio, I had to see if it 
+was supported by other applications. To my delight, I found custom Dracula 
+themes for over 400 applications. Applying these themes to my 
+OS, IDEs, browsers, and other applications is now the first thing I do when 
+I install a new tool or set up a computer. I’ve even gone so far as to get 
+[Dracula keycaps for my mechanical keyboard](https://oblotzky.industries/products/gmk-cyl-dracula-v2).
+
+When I decided to add dark mode to my `Quarto` website, Dracula was the obvious
+choice. But, given the wide-ranging support for the theme, I was surprised to
+discover there was no pre-packaged Bootstrap theme which I could plug into 
+`Quarto`. Of course, I wasn’t going to let that stop me!
+
+Starting with the 
+[Darkly theme from Bootswatch]( https://bootswatch.com/darkly/) as a base, I 
+customised the theme to incorporate the 
+[Dracula palette]( https://draculatheme.com/contribute#color-palette) using 
+the 
+handy [Bootstrap Live Customizer](https://www.bootstrap-live-customizer.com/) 
+tool, before exporting the resulting LESS code and converting it to the SCSS 
+required by `Quarto`. I had to remove a few variables which seemed to cause 
+issues when rendering. After a few additional  tweaks, I was left with a 
+Dracula themed sight that felt like home. You can access the SCSS 
+file [here]( https://github.com/B0ydT/boyd/blob/main/styles-dark.scss). If 
+you're reading this post through an aggregator, you can see it in action on my 
+original post.
+
+There are a few things to consider when adding the Dracula theme to your own 
+`Quarto` site. Not all viewers prefer the dark mode experience, so I prefer 
+to let the user decide. In the snippet from my site-wide YAML configuration 
+below, the user is offered a choice between a light and dark mode (Darkly + 
+Dracula), but the website defaults to the user’s system preference. I also 
+specified a custom font to be used across both themes, as I wanted to minimize 
+changes besides colour when switching between themes. As a final touch, specify 
+Dracula code highlighting if you are going to be including code chunks. You may 
+optionally include a styles.css file in the root directory of the project,  
+incorporating other style changes that are applied across both themes.
+
+```yaml
+---
+format:
+  html:
+    respect-user-color-scheme: true
+    theme: 
+      dark: [darkly, styles-dark.scss]
+      light: sandstone
+    header-includes: |
+      <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css2?family=Fira+Sans" type="text/css"/>
+      <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css2?family=Fira+Code" type="text/css"/>
+    mainfont: "Fira Sans"
+    monofont: "Fira Code"
+highlight-style: Dracula
+---
+```
+
+Hopefully this will be of use to some other Dracula diehards out there. I'm 
+sure I will continue to tweak the SCSS file as I spot opportunities for 
+improvement.

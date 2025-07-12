@@ -2,6 +2,7 @@
   {
     "listing": "/listings.html",
     "items": [
+      "/posts/dracula_theme.html",
       "/posts/r_books.html",
       "/posts/plot_design.html",
       "/posts/quarto_plots.html"
