@@ -3,6 +3,7 @@ title: "Apply the Dracula Theme to Quarto Websites"
 description: "And how to get the most out of dark mode"
 author: "Boyd Tarlinton"
 date: "2025/07/12"
+date-modified: "2025/07/16"
 categories:
   - R
 ---
@@ -29,7 +30,7 @@ handy [Bootstrap Live Customizer](https://www.bootstrap-live-customizer.com/)
 tool, before exporting the resulting LESS code and converting it to the SCSS 
 required by `Quarto`. I had to remove a few variables which seemed to cause 
 issues when rendering. After a few additional  tweaks, I was left with a 
-Dracula themed sight that felt like home. You can access the SCSS 
+Dracula themed site that felt like home. You can access the SCSS 
 file [here]( https://github.com/B0ydT/boyd/blob/main/styles-dark.scss). If 
 you're reading this post through an aggregator, you can see it in action on my 
 original post.

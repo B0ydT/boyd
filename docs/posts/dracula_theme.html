@@ -217,6 +217,12 @@ gtag('config', 'G-7PC836DWQK', { 'anonymize_ip': true});
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">July 16, 2025</p>
+    </div>
+  </div>
     
   </div>
   
@@ -227,7 +233,7 @@ gtag('config', 'G-7PC836DWQK', { 'anonymize_ip': true});
 
 <p>I am something of a <a href="https://draculatheme.com/">Dracula theme</a> fanatic. After first discovering the open-source theme in RStudio, I had to see if it was supported by other applications. To my delight, I found custom Dracula themes for over 400 applications. Applying these themes to my OS, IDEs, browsers, and other applications is now the first thing I do when I install a new tool or set up a computer. I’ve even gone so far as to get <a href="https://oblotzky.industries/products/gmk-cyl-dracula-v2">Dracula keycaps for my mechanical keyboard</a>.</p>
 <p>When I decided to add dark mode to my <code>Quarto</code> website, Dracula was the obvious choice. But, given the wide-ranging support for the theme, I was surprised to discover there was no pre-packaged Bootstrap theme which I could plug into <code>Quarto</code>. Of course, I wasn’t going to let that stop me!</p>
-<p>Starting with the <a href="https://bootswatch.com/darkly/">Darkly theme from Bootswatch</a> as a base, I customised the theme to incorporate the <a href="https://draculatheme.com/contribute#color-palette">Dracula palette</a> using the handy <a href="https://www.bootstrap-live-customizer.com/">Bootstrap Live Customizer</a> tool, before exporting the resulting LESS code and converting it to the SCSS required by <code>Quarto</code>. I had to remove a few variables which seemed to cause issues when rendering. After a few additional tweaks, I was left with a Dracula themed sight that felt like home. You can access the SCSS file <a href="https://github.com/B0ydT/boyd/blob/main/styles-dark.scss">here</a>. If you’re reading this post through an aggregator, you can see it in action on my original post.</p>
+<p>Starting with the <a href="https://bootswatch.com/darkly/">Darkly theme from Bootswatch</a> as a base, I customised the theme to incorporate the <a href="https://draculatheme.com/contribute#color-palette">Dracula palette</a> using the handy <a href="https://www.bootstrap-live-customizer.com/">Bootstrap Live Customizer</a> tool, before exporting the resulting LESS code and converting it to the SCSS required by <code>Quarto</code>. I had to remove a few variables which seemed to cause issues when rendering. After a few additional tweaks, I was left with a Dracula themed site that felt like home. You can access the SCSS file <a href="https://github.com/B0ydT/boyd/blob/main/styles-dark.scss">here</a>. If you’re reading this post through an aggregator, you can see it in action on my original post.</p>
 <p>There are a few things to consider when adding the Dracula theme to your own <code>Quarto</code> site. Not all viewers prefer the dark mode experience, so I prefer to let the user decide. In the snippet from my site-wide YAML configuration below, the user is offered a choice between a light and dark mode (Darkly + Dracula), but the website defaults to the user’s system preference. I also specified a custom font to be used across both themes, as I wanted to minimize changes besides colour when switching between themes. As a final touch, specify Dracula code highlighting if you are going to be including code chunks. You may optionally include a styles.css file in the root directory of the project,<br>
 incorporating other style changes that are applied across both themes.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
