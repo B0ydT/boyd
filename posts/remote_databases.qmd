@@ -1,0 +1,99 @@
+---
+title: "Managing Remote Database Connections from Quarto Documents"
+description: "And integrate seamlessly with your R code"
+author: "Boyd Tarlinton"
+date: "2025/08/10"
+categories:
+  - R
+  - Databases
+execute: 
+  echo: fenced
+  eval: false
+---
+
+R offers excellent facilities for working interactively with SQL databases on a 
+remote server. It becomes more challenging to do so in a self-contained Quarto 
+document, especially if you wish to be able to render it without running into 
+errors. Fortunately, there are ways around these challenges.
+
+The first step is establishing an SSH connection with the remote server on 
+which your database is running, allowing you to interact with the database as 
+though it were running on your own device. In an interactive session you could 
+use the following code to establish an SSH connection and open a tunnel. The
+`ssh_tunnel` function will run indefinitely, leaving you unable to execute 
+other code, but you can open a second R session and communicate with the 
+database in that second session. 
+
+```{r}
+session <- ssh::ssh_connect("username@targetserver.com")
+ssh::ssh_tunnel(session, port = 3305, 
+         target = "localhost:3306")
+```
+
+In the example above we map port 3306 on the remote server (the default port 
+for MySQL) to port 3305 on our local machine. You will often want to use the 
+same port on the local machine, but I find it is easier to keep track of 
+examples where different values are used.
+
+In a Quarto document you will need to run the SSH tunnel in the background. 
+This is made easy with the `callr` package. The example below will run the 
+SSH tunnel in a separate background process.
+
+```{r}
+rbg <- callr::r_bg(\() {
+  session <- ssh::ssh_connect("username@targetserver.com")
+  ssh::ssh_tunnel(session, port = 3305, 
+           target = "localhost:3306")
+})
+```
+
+You can now open a connection to the database as though it were running on your 
+local machine on port 3305. Given that the SSH tunnel is opened in a separate 
+process, I often find that if you attempt to connect to the database  
+directly after opening the tunnel you will encounter an error. To prevent this,
+I use `Sys.sleep()` to add a delay and allow the SSH tunnel to finish 
+connecting before establishing the connection to the database.
+
+It is easiest and safest to manage your database connections with a 
+configuration file. Typically these are stored in a user directory, but I 
+prefer to create them on a per-project basis.
+
+```{.cnf filename=".my.cnf"}
+[groupname]
+database="mydatabase"
+host="localhost"
+port="3305"
+user="username"
+password="mypassword"
+```
+
+You can use the a conf file setup like above to connect to the database.
+
+```{r}
+con <- DBI::dbConnect(RMySQL::MySQL(), 
+                 group = "groupname", 
+                 default.file = ".my.cnf")
+```
+
+You can now access the database using `DBI` in R.
+
+If you are already an experienced SQL user, you can write SQL directly in Quarto 
+using your established connection. The ability to switch between R, Python, 
+and even Julia is marketed quite heavily by the Posit team, while this SQL 
+functionality seems much more obscure.
+
+```{sql}
+#| connection: "con"
+select * from mytable;
+```
+
+You can even output of an SQL query to an R object, in this example named `df`,
+allowing you to seamlessly integrate SQL queries and R code.
+
+```{sql}
+#| connection: "con"
+#| output.var: "df"
+select * from mytable;
+```
+
+You should now be set to query with confidence.

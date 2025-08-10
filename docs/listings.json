@@ -2,6 +2,7 @@
   {
     "listing": "/listings.html",
     "items": [
+      "/posts/remote_databases.html",
       "/posts/dracula_theme.html",
       "/posts/r_books.html",
       "/posts/plot_design.html",
