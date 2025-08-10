@@ -1,6 +1,6 @@
 ---
 title: "Managing Remote Database Connections from Quarto Documents"
-description: "And integrate seamlessly with your R code"
+description: "And integrating them seamlessly with your R code"
 author: "Boyd Tarlinton"
 date: "2025/08/10"
 categories:
