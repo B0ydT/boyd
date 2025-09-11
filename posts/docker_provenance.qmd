@@ -1,0 +1,56 @@
+---
+title: "Supply Chain Attestations in Docker Hub"
+description: "Improve your container provenance"
+author: "Boyd Tarlinton"
+date: "2025/09/11"
+categories:
+  - Docker
+execute: 
+  echo: fenced
+  eval: false
+---
+
+If you have a subscription to Docker Hub, Docker’s automated builds
+can be an important part of your CI/CD pipelines. You might expect 
+it to be simple to add SBOM or provenance attestations to images built in 
+Docker Hub, especially given given the warnings produced by Docker Scout if 
+you fail to do so. Unfortunately, due to some lacking documentation, the 
+process can be tricky. But, once you understand a few intricacies, you will 
+be able to add supply chain attestations to your builds with little trouble.
+
+Making any changes to the default build instructions supplied to the Docker Hub
+automated build system requires you to add a custom build hook in 
+`/hooks/build`. Here is a custom build hook with code that, having read 
+[the docs](https://docs.docker.com/build/metadata/attestations/), 
+you might assume would add your supply chain attestations.
+
+```{.sh filename="/hooks/build"}
+#!/bin/bash
+
+docker buildx build --sbom=generator=docker/scout-sbom-indexer:latest --provenance=mode=max -t $IMAGE_NAME --output=type=registry .
+```
+
+In reality, it's not quite so simple. As pointed out in [this helpful comment thread](https://forums.docker.com/t/docker-hub-automated-build-with-providence-attestation/148412), 
+the version of Docker running in Docker Hub’s automated pipelines is out of 
+date, requiring you to use a custom builder.
+
+```{.sh filename="/hooks/build"}
+#!/bin/bash
+
+docker buildx create --name container --driver docker-container --use
+docker buildx build --sbom=generator=docker/scout-sbom-indexer:latest --provenance=mode=max -t $IMAGE_NAME --output=type=registry .
+```
+
+If you run this, you will see your build succeed in docker hub. But when you try
+to pull and run your latest image, you will notice that it doesn't work. This is
+because the custom build instructions we are using automatically pushes to the 
+registry, but the default push instruction included in the Docker Hub build 
+pipeline is still being run immediately afterwards, overwriting your successful 
+build. Fortunately, the solution is very simple – you just need to overwrite 
+the default push instructions with a blank hook.
+
+```{.sh filename="/hooks/push"}
+#!/bin/bash
+```
+
+You should now have a working build pipeline with supply chain attestations.

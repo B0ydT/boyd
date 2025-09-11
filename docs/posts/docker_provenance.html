@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Boyd Tarlinton">
+<meta name="dcterms.date" content="2025-09-11">
+<meta name="description" content="Improve your container provenance">
 
-<title>Boyd’s Bio Bytes – Boyd Tarlinton</title>
+<title>Supply Chain Attestations in Docker Hub – Boyd Tarlinton</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,30 +23,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-1259c8667061dcb120e5fb83a1fd1161.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-1259c8667061dcb120e5fb83a1fd1161.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4fad391e41078e71ff438f632756b396.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-aa390a7c7e57528efa1431ebc238c390.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="site_libs/quarto-contrib/iconify-1.0.8/iconify-icon.min.js"></script>
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1259c8667061dcb120e5fb83a1fd1161.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-1259c8667061dcb120e5fb83a1fd1161.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-4fad391e41078e71ff438f632756b396.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-aa390a7c7e57528efa1431ebc238c390.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/iconify-1.0.8/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,35 +106,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7PC836DWQK"></script>
 
 <script type="text/javascript">
@@ -112,46 +118,17 @@ gtag('config', 'G-7PC836DWQK', { 'anonymize_ip': true});
 <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css2?family=Fira+Sans" type="text/css">
 <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css2?family=Fira+Code" type="text/css">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
+</head>
 
-<link rel="alternate" type="application/rss+xml" title="Boyd Tarlinton" href="listings.xml" data-external="1"></head>
-
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Boyd Tarlinton</span>
     </a>
   </div>
@@ -162,11 +139,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./listings.html" aria-current="page"> 
+    <a class="nav-link" href="../listings.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
@@ -190,7 +167,7 @@ window.Quarto = {
 <span class="menu-text"><iconify-icon inline="" icon="fa6-brands:google-scholar" style="font-size: 1.2em;"></iconify-icon></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./listings.xml"> 
+    <a class="nav-link" href="../listings.xml"> 
 <span class="menu-text"><iconify-icon inline="" icon="fa6-solid:rss" style="font-size: 1.2em;"></iconify-icon></span></a>
   </li>  
 </ul>
@@ -202,25 +179,43 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="RGF0YWJhc2Vz">Databases <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RG9ja2Vy">Docker <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(5)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Boyd’s Bio Bytes</h1>
+<h1 class="title">Supply Chain Attestations in Docker Hub</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Docker</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Improve your container provenance
+  </div>
 </div>
 
 
+<div class="quarto-title-meta">
 
-<div class="quarto-title-meta column-page-left">
-
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Boyd Tarlinton </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 11, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -230,219 +225,38 @@ window.Quarto = {
 </header>
 
 
-<p>For more <code>R</code> content, check out <a href="http://www.R-bloggers.com">R-bloggers</a>.</p>
+<p>If you have a subscription to Docker Hub, Docker’s automated builds can be an important part of your CI/CD pipelines. You might expect it to be simple to add SBOM or provenance attestations to images built in Docker Hub, especially given given the warnings produced by Docker Scout if you fail to do so. Unfortunately, due to some lacking documentation, the process can be tricky. But, once you understand a few intricacies, you will be able to add supply chain attestations to your builds with little trouble.</p>
+<p>Making any changes to the default build instructions supplied to the Docker Hub automated build system requires you to add a custom build hook in <code>/hooks/build</code>. Here is a custom build hook with code that, having read <a href="https://docs.docker.com/build/metadata/attestations/">the docs</a>, you might assume would add your supply chain attestations.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>/hooks/build</strong></pre>
+</div>
+<div class="sourceCode" id="cb1" data-filename="/hooks/build"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> buildx build <span class="at">--sbom</span><span class="op">=</span>generator=docker/scout-sbom-indexer:latest <span class="at">--provenance</span><span class="op">=</span>mode=max <span class="at">-t</span> <span class="va">$IMAGE_NAME</span> <span class="at">--output</span><span class="op">=</span>type=registry .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In reality, it’s not quite so simple. As pointed out in <a href="https://forums.docker.com/t/docker-hub-automated-build-with-providence-attestation/148412">this helpful comment thread</a>, the version of Docker running in Docker Hub’s automated pipelines is out of date, requiring you to use a custom builder.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>/hooks/build</strong></pre>
+</div>
+<div class="sourceCode" id="cb2" data-filename="/hooks/build"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> buildx create <span class="at">--name</span> container <span class="at">--driver</span> docker-container <span class="at">--use</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> buildx build <span class="at">--sbom</span><span class="op">=</span>generator=docker/scout-sbom-indexer:latest <span class="at">--provenance</span><span class="op">=</span>mode=max <span class="at">-t</span> <span class="va">$IMAGE_NAME</span> <span class="at">--output</span><span class="op">=</span>type=registry .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you run this, you will see your build succeed in docker hub. But when you try to pull and run your latest image, you will notice that it doesn’t work. This is because the custom build instructions we are using automatically pushes to the registry, but the default push instruction included in the Docker Hub build pipeline is still being run immediately afterwards, overwriting your successful build. Fortunately, the solution is very simple – you just need to overwrite the default push instructions with a blank hook.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>/hooks/push</strong></pre>
+</div>
+<div class="sourceCode" id="cb3" data-filename="/hooks/push"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You should now have a working build pipeline with supply chain attestations.</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="RG9ja2Vy" data-listing-date-sort="1757512800000" data-listing-file-modified-sort="1757579838239" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="289">
-<div class="thumbnail">
-<p><a href="./posts/docker_provenance.html" class="no-external"></a></p><a href="./posts/docker_provenance.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/docker_provenance.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/docker_provenance.html" class="no-external">Supply Chain Attestations in Docker Hub</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/docker_provenance.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('RG9ja2Vy'); return false;">
-Docker
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/docker_provenance.html" class="no-external">Improve your container provenance</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/docker_provenance.html" class="no-external">
-<div class="listing-date">
-Sep 11, 2025
-</div>
-<div class="listing-author">
-Boyd Tarlinton
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UiUyQ0RhdGFiYXNlcw==" data-listing-date-sort="1754748000000" data-listing-file-modified-sort="1754808187144" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="523">
-<div class="thumbnail">
-<p><a href="./posts/remote_databases.html" class="no-external"></a></p><a href="./posts/remote_databases.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/remote_databases.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/remote_databases.html" class="no-external">Managing Remote Database Connections from Quarto Documents</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/remote_databases.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RGF0YWJhc2Vz'); return false;">
-Databases
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/remote_databases.html" class="no-external">And integrating them seamlessly with your R code</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/remote_databases.html" class="no-external">
-<div class="listing-date">
-Aug 10, 2025
-</div>
-<div class="listing-author">
-Boyd Tarlinton
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Ug==" data-listing-date-sort="1752242400000" data-listing-file-modified-sort="1752664679424" data-listing-date-modified-sort="1752588000000" data-listing-reading-time-sort="3" data-listing-word-count-sort="455">
-<div class="thumbnail">
-<p><a href="./posts/dracula_theme.html" class="no-external"></a></p><a href="./posts/dracula_theme.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/dracula_theme.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/dracula_theme.html" class="no-external">Apply the Dracula Theme to Quarto Websites</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/dracula_theme.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/dracula_theme.html" class="no-external">And how to get the most out of dark mode</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/dracula_theme.html" class="no-external">
-<div class="listing-date">
-Jul 12, 2025
-</div>
-<div class="listing-author">
-Boyd Tarlinton
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Ug==" data-listing-date-sort="1750946400000" data-listing-file-modified-sort="1750999290825" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="596">
-<div class="thumbnail">
-<p><a href="./posts/r_books.html" class="no-external"></a></p><a href="./posts/r_books.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/r_books.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/r_books.html" class="no-external">Beyond the Basics: Books to Supercharge Your R Skills</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/r_books.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/r_books.html" class="no-external">My top five picks for the intermediate R user</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/r_books.html" class="no-external">
-<div class="listing-date">
-Jun 27, 2025
-</div>
-<div class="listing-author">
-Boyd Tarlinton
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Ug==" data-listing-date-sort="1743861600000" data-listing-file-modified-sort="1752126212539" data-listing-date-modified-sort="1744120800000" data-listing-reading-time-sort="3" data-listing-word-count-sort="457">
-<div class="thumbnail">
-<p><a href="./posts/plot_design.html" class="no-external"></a></p><a href="./posts/plot_design.html" class="no-external">
-<p class="card-img-top"><img src="posts\plot_design_files\figure-html\feature-image-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/plot_design.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/plot_design.html" class="no-external">Three Tips for Better R Figures</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/plot_design.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/plot_design.html" class="no-external">More effective and readable plots</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/plot_design.html" class="no-external">
-<div class="listing-date">
-Apr 6, 2025
-</div>
-<div class="listing-author">
-Boyd Tarlinton
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="Ug==" data-listing-date-sort="1743170400000" data-listing-file-modified-sort="1744186983827" data-listing-date-modified-sort="1744120800000" data-listing-reading-time-sort="2" data-listing-word-count-sort="286">
-<div class="thumbnail">
-<p><a href="./posts/quarto_plots.html" class="no-external"></a></p><a href="./posts/quarto_plots.html" class="no-external">
-<p class="card-img-top"><img src="posts\quarto_plots_files\figure-html\unnamed-chunk-2-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/quarto_plots.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/quarto_plots.html" class="no-external">Three Tips for Better Quarto Plots</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/quarto_plots.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/quarto_plots.html" class="no-external">Simple methods for higher-quality figures</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/quarto_plots.html" class="no-external">
-<div class="listing-date">
-Mar 29, 2025
-</div>
-<div class="listing-author">
-Boyd Tarlinton
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
