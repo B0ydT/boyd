@@ -16,6 +16,7 @@ highlight-style: dracula
 website:
   title: "Boyd Tarlinton"
   site-url: https://boyd.tarlinton.au
+  favicon: favicon.ico
   navbar:
     right:
       - text: Blog
