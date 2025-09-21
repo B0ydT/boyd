@@ -2,6 +2,7 @@
   {
     "listing": "/listings.html",
     "items": [
+      "/posts/sept_oct_events.html",
       "/posts/docker_provenance.html",
       "/posts/remote_databases.html",
       "/posts/dracula_theme.html",

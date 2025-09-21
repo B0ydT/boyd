@@ -10,7 +10,40 @@
 <atom:link href="https://boyd.tarlinton.au/listings.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.6.42</generator>
-<lastBuildDate>Wed, 10 Sep 2025 14:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 20 Sep 2025 14:00:00 GMT</lastBuildDate>
+<item>
+  <title>September/October Events</title>
+  <dc:creator>Boyd Tarlinton</dc:creator>
+  <link>https://boyd.tarlinton.au/posts/sept_oct_events.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The last two months have been packed with exciting scientific events, which I’d like to briefly recap here.</p>
+<p>The first event was the Make it Snappy challenge, held between departments at my workplace as part of National Science Week 2025. This was a fun opportunity to deliver a rapid-fire presentation in the vein of the Three Minute Thesis. Creating and rehearsing a presentation to be delivered in such a short timeframe was a new experience for me, and one that I really enjoyed. It was also fantastic to see some of the work being done by people in my office that is very different to my own.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://boyd.tarlinton.au/posts/images/mis.jpg" class="img-fluid figure-img" width="400"></p>
+<figcaption>Make it Snappy challenge</figcaption>
+</figure>
+</div>
+<p>Next up was the Avocado Production R&amp;D Summit. I got to absorb a full day of presentations on key avocado research projects being conducted across Australia. This event did a particularly great job of approaching scientific research with an industry perspective.</p>
+<p>Finally, I attended The Future of Hort Science Roadshow, hosted by the Australian Society of Horticultural Science with funding by the National Farmers’ Federation. I was fortunate enough to get the opportunity to present at this event and even received a travel award to do so. The other presentations were excellent, and the enthusiasm for horticulture among the attendees was palpable. The event also featured a fantastic keynote presentation by Honorary Professor Daryl Joyce, whom I have been fortunate enough to work with for the past two years.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://boyd.tarlinton.au/posts/images/fhs_roadshow.jpg" class="img-fluid figure-img" width="400"></p>
+<figcaption>Future of Hort Science Roadshow</figcaption>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>Events</category>
+  <guid>https://boyd.tarlinton.au/posts/sept_oct_events.html</guid>
+  <pubDate>Sat, 20 Sep 2025 14:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Supply Chain Attestations in Docker Hub</title>
   <dc:creator>Boyd Tarlinton</dc:creator>

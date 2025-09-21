@@ -1,0 +1,25 @@
+---
+title: "September/October Events"
+description: "Two months in review"
+author: "Boyd Tarlinton"
+date: "2025/09/21"
+categories:
+  - Events
+format: 
+  html:
+    fig-width: 4
+    fig-height: 3
+    fig-align: center
+---
+
+The last two months have been packed with exciting scientific events, which I’d like to briefly recap here.
+
+The first  event was the Make it Snappy challenge, held between departments at my workplace as part of National Science Week 2025. This was a fun opportunity to deliver a rapid-fire presentation in the vein of the Three Minute Thesis. Creating and rehearsing a presentation to be delivered in such a short timeframe was a new experience for me, and one that I really enjoyed. It was also fantastic to see some of the work being done by people in my office that is very different to my own.
+
+![Make it Snappy challenge](images/mis.jpg){width=400}
+
+Next up was the Avocado Production R&D Summit. I got to absorb a full day of presentations on key avocado research projects being conducted across Australia. This event did a particularly great job of approaching scientific research with an industry perspective.
+
+Finally, I attended The Future of Hort Science Roadshow, hosted by the Australian Society of Horticultural Science with funding by the National Farmers’ Federation. I was fortunate enough to get the opportunity to present at this event and even received a travel award to do so. The other presentations were excellent, and the enthusiasm for horticulture among the attendees was palpable. The event also featured a fantastic keynote presentation by Honorary Professor Daryl Joyce, whom I have been fortunate enough to work with for the past two years.
+
+![Future of Hort Science Roadshow](images/fhs_roadshow.jpg){width=400}
